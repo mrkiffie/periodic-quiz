@@ -1,0 +1,11 @@
+<div *ngIf="selectedCountry" class="flag-container">
+    <img src="/svg/{{selectedCountry.iso3}}.svg" alt="Flag" width="300" />
+</div>
+
+<ul class="countries" class="cf">
+    <li *ngFor="#country of countries">
+        <button (click)="onSelect(country)">
+            {{country.country}}
+        </button>
+    </li>
+</ul>

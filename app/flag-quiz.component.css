@@ -1,0 +1,52 @@
+.flag-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10em;
+}
+img {
+    width: auto;
+    height: auto;
+    max-width: 90%;
+    max-height: 10em;
+    display: block;
+    margin: 0 auto;
+    outline: 1px solid #eee;
+}
+ul, li{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+li {
+    display: block;
+    margin: 1em auto 0;
+    width: 90%;
+}
+
+li button {
+    font-size: inherit;
+    padding: .5em 1em;
+    background: #dfdfdf;
+    border: 0;
+    color: #3e3e3e;
+    border-radius: .25em;
+}
+
+li button:hover,
+li button:active,
+li button:focus {
+    background: #3e3e3e;
+    outline: 0;
+    color: #fff;
+}
+
+button.correct {
+    background: #4CAF50;
+    color: white;
+}
+
+button.incorrect {
+    background: #F44336;
+    color: white;
+}
