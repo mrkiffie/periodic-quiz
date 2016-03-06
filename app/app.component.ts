@@ -12,26 +12,28 @@ import {Random} from './random';
     template: `
       <h1>{{title}}</h1>
       <quiz-score [score]="_scoreService.score" [counter]="_scoreService.counter"></quiz-score>
-
+      <button (click)="_scoreService.resetScore()">Restart</button>
       <flag-quiz></flag-quiz>
     `,
-    styles: [``],
+    styles: [`
+        button {
+            font-size: inherit;
+            padding: .5em 1em;
+            background: #dfdfdf;
+            border: 0;
+            color: #3e3e3e;
+            border-radius: .25em;
+            margin: 0 1em 1em;
+        }
+    `],
     directives: [FlagQuizComponent, ScoreComponent],
     providers: [CountryService, ScoreService]
 })
 
-export class AppComponent implements OnInit {
+export class AppComponent {
 
     title: string = 'Country Flag Quiz';
-    score: number;
 
     constructor(private _countryService: CountryService, private _scoreService: ScoreService) { }
 
-    ngOnInit() {
-        this.populateScore();
-    }
-
-    populateScore() {
-        this._scoreService.resetScore();
-    }
 }
