@@ -1,5 +1,5 @@
 <div *ngIf="selectedCountry" class="flag-container">
-    <img src="/svg/{{selectedCountry.iso3}}.svg" alt="Flag" width="300" />
+    <img src="/svg/{{selectedCountry.iso3 | lowercase}}.svg" alt="Flag" width="300" />
 </div>
 
 <ul class="countries" class="cf">
