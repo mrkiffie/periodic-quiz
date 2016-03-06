@@ -40,19 +40,19 @@ export class FlagQuizComponent implements OnInit {
 
     correctAnswer(): void {
         this._scoreService.incrementScore();
-        this.changeItem();
+        this.changeItem(true);
     }
 
     incorrectAnswer(): void {
         this._scoreService.incrementCounter();
-        this.changeItem();
+        this.changeItem(false);
     }
 
-    changeItem(): void {
+    changeItem(correct: boolean): void {
         setTimeout(_ => {
             this.chosenCountry = null;
             this.getCountries();
-        }, 500);
+        }, correct ? 1000 : 3000);
     }
 
 }
