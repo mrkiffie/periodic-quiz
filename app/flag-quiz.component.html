@@ -4,7 +4,9 @@
 
 <ul class="countries" class="cf">
     <li *ngFor="#country of countries">
-        <button (click)="onSelect(country)">
+        <button (click)="onSelect(country)"
+            [class.correct]="selectedCountry == country && chosenCountry"
+            [class.incorrect]="chosenCountry !== selectedCountry && chosenCountry == country">
             {{country.country}}
         </button>
     </li>

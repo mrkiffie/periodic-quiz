@@ -14,6 +14,7 @@ export class FlagQuizComponent implements OnInit {
 
     countries: Country[];
     selectedCountry: Country;
+    chosenCountry: Country = null;
 
     ngOnInit() {
         this.getCountries();
@@ -22,6 +23,7 @@ export class FlagQuizComponent implements OnInit {
     constructor(private _countryService: CountryService, private _scoreService: ScoreService) { }
 
     onSelect(country) {
+        this.chosenCountry = country;
         if (country.iso3 === this.selectedCountry.iso3) {
             this.correctAnswer();
         } else {
@@ -47,7 +49,10 @@ export class FlagQuizComponent implements OnInit {
     }
 
     changeItem(): void {
-        this.getCountries();
+        setTimeout(_ => {
+            this.chosenCountry = null;
+            this.getCountries();
+        }, 500);
     }
 
 }

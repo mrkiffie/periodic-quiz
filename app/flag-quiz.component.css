@@ -24,7 +24,7 @@ li {
     width: 90%;
 }
 
-li button {
+button {
     font-size: inherit;
     padding: .5em 1em;
     background: #dfdfdf;
@@ -33,9 +33,9 @@ li button {
     border-radius: .25em;
 }
 
-li button:hover,
-li button:active,
-li button:focus {
+button:hover,
+button:active,
+button:focus {
     background: #3e3e3e;
     outline: 0;
     color: #fff;
