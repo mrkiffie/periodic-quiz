@@ -1,0 +1,14 @@
+<div *ngIf="selectedCountry" >
+    {{selectedCountry.country}}
+</div>
+
+<ul class="countries" class="cf">
+    <li *ngFor="#country of countries">
+        <button (click)="onSelect(country)"
+            [class.correct]="selectedCountry == country && chosenCountry"
+            [class.incorrect]="chosenCountry !== selectedCountry && chosenCountry == country">
+            <img src="/svg/{{country.iso3 | lowercase}}.svg" alt="Flag" width="300" />
+        </button>
+    </li>
+</ul>
+

@@ -6,12 +6,12 @@ import {Random} from './random';
 import {BaseQuizComponent} from './base-quiz.component';
 
 @Component({
-    selector: 'flag-quiz',
-    styleUrls: ['app/flag-quiz.component.css'],
-    templateUrl: 'app/flag-quiz.component.html'
+    selector: 'country-flag-quiz',
+    styleUrls: ['app/country-flag-quiz.component.css'],
+    templateUrl: 'app/country-flag-quiz.component.html'
 })
 
-export class FlagQuizComponent extends BaseQuizComponent implements OnInit {
+export class CountryFlagQuizComponent extends BaseQuizComponent implements OnInit {
 
     constructor(protected _countryService: CountryService, protected _scoreService: ScoreService) {
         super(_countryService, _scoreService);
