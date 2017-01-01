@@ -2,3 +2,5 @@
 /app/*.map
 /node_modules/
 typings/
+build/
+.env
