@@ -1,23 +1,23 @@
 export const SELECT_COUNTRY = 'SELECT_COUNTRY';
 export const LOAD_COUNTRY = 'LOAD_COUNTRY';
 export const LOAD_QUIZ = 'LOAD_QUIZ';
+export const TOGGLE_MENU = 'TOGGLE_MENU';
 
-export function loadQuiz() {
-  return {
-    type: LOAD_QUIZ
-  };
-}
+export const loadQuiz = () => ({
+  type: LOAD_QUIZ,
+});
 
-export function selectCountry(country = null) {
-  return {
-    type: SELECT_COUNTRY,
-    payload: country
-  };
-}
+export const selectCountry = (country = null) => ({
+  type: SELECT_COUNTRY,
+  payload: country,
+});
 
-export function loadCountry(iso = null){
-  return {
-    type: LOAD_COUNTRY,
-    payload: iso
-  };
-}
+export const loadCountry = (iso = null) => ({
+  type: LOAD_COUNTRY,
+  payload: iso,
+});
+
+export const toggleMenu = (open = false) => ({
+  type: TOGGLE_MENU,
+  payload: open,
+});

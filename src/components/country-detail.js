@@ -1,9 +1,7 @@
-import React, {Component} from 'react';
-import {connect} from 'react-redux';
-import {selectCountry, loadCountry} from '../actions/index';
-import {Link} from 'react-router';
-
-import CountryListItem from './country-list-item';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { selectCountry, loadCountry } from '../actions/index';
+import { Flag, FlagList, Container, Heading, SubHeading } from './ui';
 
 class CountryDetail extends Component {
 
@@ -11,49 +9,29 @@ class CountryDetail extends Component {
     this.props.loadCountry(this.props.params.iso);
   }
 
-  componentDidUpdate (prevProps) {
-
-    let oldId = prevProps.params.iso;
-    let newId = this.props.params.iso;
+  componentDidUpdate(prevProps) {
+    const oldId = prevProps.params.iso;
+    const newId = this.props.params.iso;
     if (newId !== oldId) {
       this.props.loadCountry(this.props.params.iso);
     }
   }
 
-  renderNeighbours(neighbours) {
-    if (!neighbours.length) {
-      return;
-    }
-    return (
-      <div className="neighbours">
-          <ul>
-            {neighbours.map((neighbour) => {
-              return (
-              <li key={neighbour.iso}>
-                <CountryListItem country={neighbour} />
-              </li>
-              );})}
-          </ul>
-      </div>
-    );
-  }
-
   render() {
     const country = this.props.country;
     if (!country) {
-      return <div>Loading...</div>;
+      return <div />;
     }
 
     return (
-      <div className="country-detail">
-        <img src={`/svg/${country.iso3.toLowerCase()}.svg`} alt="Flag" width="300" className="cover" />
-        <div className="cf details">
-          <h2 className="name">{country.name}</h2>
-          <h2 className="capital">{country.capital}</h2>
-        </div>
-        {this.renderNeighbours(country.neighbours)}
+      <div>
+        <Container>
+          <Flag iso3={country.iso3} large />
+        </Container>
+        <Heading>{country.name}</Heading>
+        <SubHeading>{country.capital}</SubHeading>
 
-        <Link to="/" className="back-link">Back</Link>
+        <FlagList countries={country.neighbours} />
       </div>
     );
   }
@@ -61,8 +39,8 @@ class CountryDetail extends Component {
 
 function mapStateToProps(state) {
   return {
-    country: state.country
+    country: state.country,
   };
 }
 
-export default connect(mapStateToProps, {loadCountry, selectCountry})(CountryDetail);
+export default connect(mapStateToProps, { loadCountry, selectCountry })(CountryDetail);

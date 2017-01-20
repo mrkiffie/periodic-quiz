@@ -1,15 +1,14 @@
 import countries from './countries';
 
-const indexedCountries = countries.reduce((map, country) => {
-  map[country.iso] = country;
-  return map;
-}, {});
+const indexedCountries = countries.reduce(
+  (hash, country) => Object.assign({}, hash, { [country.iso]: country }), {},
+);
 
-countries.forEach(country => {
-  country.neighbours.forEach(iso => {
+countries.forEach((country) => {
+  country.neighbours.forEach((iso) => {
     const neighbour = indexedCountries[iso];
     if (!neighbour) {
-      console.log('country not found', iso);
+      console.warn('country not found', iso);
     }
   });
 });
