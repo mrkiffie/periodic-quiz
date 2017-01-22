@@ -1,4 +1,4 @@
-export default [
+const countries = [
   {
     iso: 'AF',
     iso3: 'AFG',
@@ -2741,3 +2741,10 @@ export default [
     tld: '.zw',
   },
 ];
+
+import * as flags from './flags';
+
+export default countries.map(country => {
+  country.flag = flags[country.iso3];
+  return country;
+})

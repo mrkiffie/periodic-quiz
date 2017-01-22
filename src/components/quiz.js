@@ -28,7 +28,7 @@ class Quiz extends Component {
           alignItems: 'center',
         }}
       >
-        {type === 'flag' ? <Flag iso3={option.iso3} /> : ''}
+        {type === 'flag' ? <Flag flag={option.flag} /> : ''}
         {type === 'country' ? option.name : ''}
         {type === 'capital' ? option.capital : ''}
         <AnswerStatus {...this.props} option={option} />
@@ -50,7 +50,7 @@ class Quiz extends Component {
 
         <Score score={score} count={count} />
         {from === 'flag' ? <Container>
-          <Flag iso3={answer.iso3} large />
+          <Flag flag={answer.flag} large />
         </Container> : '' }
         {from === 'country' ? <Heading>{answer.name}</Heading> : ''}
         {from === 'capital' ? <Heading>{answer.capital}</Heading> : ''}

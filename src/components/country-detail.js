@@ -26,7 +26,7 @@ class CountryDetail extends Component {
     return (
       <div>
         <Container>
-          <Flag iso3={country.iso3} large />
+          <Flag flag={country.flag} large />
         </Container>
         <Heading>{country.name}</Heading>
         <SubHeading>{country.capital}</SubHeading>

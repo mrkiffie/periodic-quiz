@@ -7,7 +7,7 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 import { createStore, applyMiddleware } from 'redux';
 import { Router, browserHistory } from 'react-router';
 import routes from './routes';
-import { Theme } from './components/ui/theme';
+import Theme from './components/ui/theme';
 
 import reducers from './reducers';
 

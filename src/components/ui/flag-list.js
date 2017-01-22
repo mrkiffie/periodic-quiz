@@ -16,7 +16,7 @@ export default ({ countries = [] }) => (
         key={country.iso}
         containerElement={<Link to={`/countries/${country.iso}`} />}
       >
-        <Flag iso3={country.iso3} />
+        <Flag flag={country.flag} />
       </ListItem>
     ))}
   </List>

@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default ({ iso3, large = false }) => {
+export default ({ flag, large = false }) => {
   const flagStyle = {
     width: 'auto',
     height: 'auto',
@@ -12,7 +12,7 @@ export default ({ iso3, large = false }) => {
   return (
     <div>
       <img
-        src={`/svg/${iso3.toLowerCase()}.svg`}
+        src={flag}
         alt="Flag"
         style={flagStyle}
       />
