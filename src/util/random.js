@@ -9,9 +9,7 @@ export default class Random {
     const array = originalArray.slice();
     for (let i = array.length - 1; i > 0; i -= 1) {
       const j = Math.floor(Math.random() * (i + 1));
-      const temp = array[i];
-      array[i] = array[j];
-      array[j] = temp;
+      [array[i], array[j]] = [array[j], array[i]];
     }
     return array;
   }
@@ -20,8 +18,12 @@ export default class Random {
     return array[this.getRandomIntegerBetween(0, array.length - 1)];
   }
 
+  static getRandomInt(num) {
+    return Math.floor(Math.random() * num);
+  }
+
   static getRandomIntegerBetween(min, max) {
-    return Math.floor(Math.random() * ((max - min) + 1)) + min;
+    return this.getRandomInt(max - min) + min;
   }
 
 }

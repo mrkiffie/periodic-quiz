@@ -8,10 +8,11 @@ import { createStore, applyMiddleware } from 'redux';
 import { Router, browserHistory } from 'react-router';
 import routes from './routes';
 import Theme from './components/ui/theme';
+import reduxThunk from 'redux-thunk'
 
 import reducers from './reducers';
 
-const createStoreWithMiddleware = applyMiddleware()(createStore);
+const createStoreWithMiddleware = applyMiddleware(reduxThunk)(createStore);
 
 injectTapEventPlugin();
 

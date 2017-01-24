@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { List, ListItem } from 'material-ui';
+import List from 'material-ui/List/List';
+import ListItem from 'material-ui/List/ListItem';
 import { Flag, Container, AnswerStatus, Heading } from './ui';
-import Score from './score';
-import { selectCountry, loadQuiz } from '../actions';
+import { answerQuiz } from '../actions';
 
 class Quiz extends Component {
 
@@ -11,10 +11,7 @@ class Quiz extends Component {
     if (this.props.selected) {
       return; // option already selected - prevent duplicate clicks
     }
-    this.props.selectCountry(option);
-    setTimeout(() => {
-      this.props.loadQuiz();
-    }, 2500);
+    this.props.answerQuiz(option);
   }
 
   renderOptions(type) {
@@ -26,6 +23,11 @@ class Quiz extends Component {
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center',
+          lineHeight: '2',
+          padding: '.5em 1em'
+        }}
+        style={{
+          padding: '0em 1em'
         }}
       >
         {type === 'flag' ? <Flag flag={option.flag} /> : ''}
@@ -37,18 +39,16 @@ class Quiz extends Component {
   }
 
   render() {
-    const { answer, params, score, count } = this.props;
+    const { answer, params } = this.props;
 
     if (!answer) {
       return <div />;
     }
 
-    const { from, to } = params;
+    const { from = 'flag', to = 'country'} = params;
 
     return (
       <div>
-
-        <Score score={score} count={count} />
         {from === 'flag' ? <Container>
           <Flag flag={answer.flag} large />
         </Container> : '' }
@@ -62,4 +62,4 @@ class Quiz extends Component {
   }
 }
 
-export default connect(state => ({ ...state.quiz }), { selectCountry, loadQuiz })(Quiz);
+export default connect(state => ({ ...state.quiz }), { answerQuiz })(Quiz);

@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default ({ flag, large = false }) => {
+export default ({ flag, large = false, onLoad }) => {
   const flagStyle = {
     width: 'auto',
     height: 'auto',
@@ -15,6 +15,7 @@ export default ({ flag, large = false }) => {
         src={flag}
         alt="Flag"
         style={flagStyle}
+        onLoad={onLoad}
       />
     </div>
   );

@@ -1,25 +1,15 @@
-import Random from '../util/random';
-import countries from '../data/countries';
-import { SELECT_COUNTRY, LOAD_QUIZ } from '../actions';
-
-const NUMBER_OF_CHOICES = 5;
-
-const options = Random.getRandomRange(countries, NUMBER_OF_CHOICES);
-const answer = Random.getRandomRange(options, 1)[0];
+import {generateQuizOptions} from '../data/quiz';
+import { SELECT_COUNTRY, SET_QUIZ } from '../actions';
 
 const INITIAL_STATE = {
-  options,
-  answer,
+  ...generateQuizOptions(),
   score: 0,
   count: 0,
-  selected: null,
+  selected: null
 };
 
 export default function (state = INITIAL_STATE, action) {
-  const options = Random.getRandomRange(countries, NUMBER_OF_CHOICES);
-  const answer = Random.getRandomRange(options, 1)[0];
   let correct;
-
   switch (action.type) {
     case SELECT_COUNTRY:
       correct = action.payload.iso === state.answer.iso;
@@ -29,11 +19,10 @@ export default function (state = INITIAL_STATE, action) {
         count: state.count + 1,
         selected: action.payload,
       };
-    case LOAD_QUIZ:
+    case SET_QUIZ:
       return {
         ...state,
-        options,
-        answer,
+        ...action.payload,
         selected: null,
       };
     default:
