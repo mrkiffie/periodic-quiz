@@ -30,6 +30,7 @@ class Quiz extends Component {
           padding: '0em 1em'
         }}
       >
+        <span style={{width: '24px'}}/>
         {type === 'flag' ? <Flag flag={option.flag} /> : ''}
         {type === 'country' ? option.name : ''}
         {type === 'capital' ? option.capital : ''}
