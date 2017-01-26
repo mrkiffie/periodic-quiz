@@ -8,12 +8,17 @@ export const setQuiz = (quiz) => ({
   payload: quiz
 });
 
-export const fetchFlag = (country) => {
-  return new Promise(resolve => {
-    const flag = new Image();
-    flag.onload = () => resolve();
-    flag.src = country.flag
+export const loadImg = (src) => {
+  return new Promise((resolve, reject) => {
+    const img = new Image();
+      img.onload = () => resolve();
+      img.onerror = () => reject(src);
+      img.src = src;
   });
+}
+export const fetchFlag = (country) => {
+  return loadImg(country.flag)
+    .catch(src => loadImg(src))
 };
 
 export const wait = (time) => {
