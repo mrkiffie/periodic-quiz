@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { FlagList } from './ui';
+import React, {Component} from 'react';
+import {connect} from 'react-redux';
+import {FlagList} from './ui';
 
 class FlagListIndex extends Component {
   render() {
@@ -10,4 +10,4 @@ class FlagListIndex extends Component {
   }
 }
 
-export default connect(state => ({ countries: state.countries }))(FlagListIndex);
+export default connect(state => ({countries: state.countries}))(FlagListIndex);

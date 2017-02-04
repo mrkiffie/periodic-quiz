@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { AppBar } from 'material-ui';
+import React, {Component} from 'react';
+import {connect} from 'react-redux';
+import {AppBar} from 'material-ui';
 import Navigation from './navigation';
-import { toggleMenu } from '../actions';
+import {toggleMenu} from '../actions';
 import Score from './score';
 
 class AppHeader extends Component {
@@ -27,4 +27,4 @@ class AppHeader extends Component {
   }
 }
 
-export default connect(state => ({ menu: state.menu, settings: state.settings, quiz: state.quiz }), { toggleMenu })(AppHeader);
+export default connect(state => ({menu: state.menu, settings: state.settings, quiz: state.quiz}), {toggleMenu})(AppHeader);

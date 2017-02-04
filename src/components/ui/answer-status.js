@@ -1,9 +1,9 @@
 import React from 'react';
-import { green500, red500 } from 'material-ui/styles/colors';
+import {green500, red500} from 'material-ui/styles/colors';
 import NavigationCheck from 'material-ui/svg-icons/navigation/check';
 import NavigationClose from 'material-ui/svg-icons/navigation/close';
 
-export default ({ answer, selected, option }) => {
+export default ({answer, selected, option}) => {
   // always show the correct answer
   if (selected && option.iso === answer.iso) {
     return <NavigationCheck color={green500} />;

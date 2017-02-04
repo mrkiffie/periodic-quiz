@@ -1,8 +1,9 @@
 import countries from './countries';
 
-const indexedCountries = countries.reduce(
-  (hash, country) => Object.assign({}, hash, { [country.iso]: country }), {},
-);
+const indexedCountries = countries.reduce((hash, country) => ({
+  ...hash,
+  ...{[country.iso]: country}
+}), {});
 
 countries.forEach((country) => {
   country.neighbours.forEach((iso) => {

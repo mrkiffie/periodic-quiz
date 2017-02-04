@@ -1,8 +1,8 @@
 import React from 'react';
 import muiThemeable from 'material-ui/styles/muiThemeable';
-import { SubHeading } from './ui';
+import {SubHeading} from './ui';
 
-const About = ({ muiTheme }) => {
+const About = ({muiTheme}) => {
   const styles = {
     div: {
       textAlign: 'center',

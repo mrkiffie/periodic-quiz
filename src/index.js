@@ -1,12 +1,12 @@
 /* eslint-env browser */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
+import {Provider} from 'react-redux';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import injectTapEventPlugin from 'react-tap-event-plugin';
-import { createStore, applyMiddleware, compose } from 'redux';
-import { persistStore, autoRehydrate } from 'redux-persist'
-import { Router, browserHistory } from 'react-router';
+import {createStore, applyMiddleware, compose} from 'redux';
+import {persistStore, autoRehydrate} from 'redux-persist'
+import {Router, browserHistory} from 'react-router';
 import routes from './routes';
 import Theme from './components/ui/theme';
 import reduxThunk from 'redux-thunk';

@@ -1,1 +1,8 @@
-extends: 'react-app'
+extends: react-app
+rules:
+  object-curly-spacing:
+  - error
+  - never
+  quotes:
+  - error
+  - single

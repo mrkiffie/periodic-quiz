@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import Drawer from 'material-ui/Drawer';
 import List from 'material-ui/List/List';
 import ListItem from 'material-ui/List/ListItem';
@@ -18,21 +18,21 @@ class Navigation extends Component {
 
   render() {
     const routes = [
-      { route: '/flag-country', text: 'Flag Country' },
-      { route: '/flag-capital', text: 'Flag Capital' },
-      { route: '/country-flag', text: 'Country Flag' },
-      { route: '/country-capital', text: 'Country Capital' },
-      { route: '/capital-flag', text: 'Capital Flag' },
-      { route: '/capital-country', text: 'Capital Country' },
-      { route: '/flag-list', text: 'Flag List' },
+      {route: '/flag-country', text: 'Flag Country'},
+      {route: '/flag-capital', text: 'Flag Capital'},
+      {route: '/country-flag', text: 'Country Flag'},
+      {route: '/country-capital', text: 'Country Capital'},
+      {route: '/capital-flag', text: 'Capital Flag'},
+      {route: '/capital-country', text: 'Capital Country'},
+      {route: '/flag-list', text: 'Flag List'},
     ];
 
-    const { open, muiTheme } = this.props;
+    const {open, muiTheme} = this.props;
 
     return (
       <div>
         <Drawer open={open}>
-          <List style={{ paddingTop: 0, textAlign: 'left' }}>
+          <List style={{paddingTop: 0, textAlign: 'left'}}>
             <ListItem
               onClick={() => this.onCLick(0)}
               style={{
@@ -48,7 +48,7 @@ class Navigation extends Component {
                 }}
               />
             </ListItem>
-            {routes.map(({ route, text }) => (
+            {routes.map(({route, text}) => (
               <ListItem
                 key={route}
                 containerElement={<Link to={route} />}

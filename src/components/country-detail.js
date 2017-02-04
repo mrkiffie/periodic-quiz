@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { selectCountry, loadCountry } from '../actions/index';
-import { Flag, FlagList, Container, Heading, SubHeading } from './ui';
+import React, {Component} from 'react';
+import {connect} from 'react-redux';
+import {selectCountry, loadCountry} from '../actions/index';
+import {Flag, FlagList, Container, Heading, SubHeading} from './ui';
 
 class CountryDetail extends Component {
 
@@ -43,4 +43,4 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps, { loadCountry, selectCountry })(CountryDetail);
+export default connect(mapStateToProps, {loadCountry, selectCountry})(CountryDetail);

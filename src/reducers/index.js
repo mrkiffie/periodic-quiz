@@ -1,4 +1,4 @@
-import { combineReducers } from 'redux';
+import {combineReducers} from 'redux';
 import QuizReducer from './reducer-quiz';
 import CountryListReducer from './reducer-country-list';
 import CountryReducer from './reducer-country';

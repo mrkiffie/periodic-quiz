@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import React, {Component} from 'react';
+import {connect} from 'react-redux';
 import ListItem from 'material-ui/List/ListItem';
 import Toggle from 'material-ui/Toggle';
-import { toggleScore } from '../actions';
+import {toggleScore} from '../actions';
 
 class Settings extends Component {
 
@@ -31,4 +31,4 @@ class Settings extends Component {
   }
 }
 
-export default connect(state => state.settings, { toggleScore })(Settings);
+export default connect(state => state.settings, {toggleScore})(Settings);

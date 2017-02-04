@@ -4,7 +4,7 @@ import List from 'material-ui/List/List';
 import ListItem from 'material-ui/List/ListItem';
 import Flag from './flag';
 
-export default ({ countries = [] }) => (
+export default ({countries = []}) => (
   <List
     style={{
       display: 'flex',

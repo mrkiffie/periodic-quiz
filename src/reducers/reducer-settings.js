@@ -1,5 +1,5 @@
-import { TOGGLE_SCORE } from '../actions';
-import { TOGGLE_DEBUG } from '../actions';
+import {TOGGLE_SCORE} from '../actions';
+import {TOGGLE_DEBUG} from '../actions';
 
 const INITIAL_STATE = {
   debug: false,

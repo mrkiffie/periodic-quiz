@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default ({ score, count }) => (
+export default ({score, count}) => (
   <div
     style={{
       color: '#fff',

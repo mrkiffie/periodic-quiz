@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import React, {Component} from 'react';
+import {connect} from 'react-redux';
 import List from 'material-ui/List/List';
 import ListItem from 'material-ui/List/ListItem';
-import { Flag, Container, AnswerStatus, Heading } from './ui';
-import { answerQuiz } from '../actions';
+import {Flag, Container, AnswerStatus, Heading} from './ui';
+import {answerQuiz} from '../actions';
 
 class Quiz extends Component {
 
@@ -41,13 +41,13 @@ class Quiz extends Component {
   }
 
   render() {
-    const { answer, params } = this.props;
+    const {answer, params} = this.props;
 
     if (!answer) {
       return <div />;
     }
 
-    const { from = 'flag', to = 'country'} = params;
+    const {from = 'flag', to = 'country'} = params;
 
     return (
       <div>
@@ -56,7 +56,7 @@ class Quiz extends Component {
         </Container> : '' }
         {from === 'country' ? <Heading>{answer.name}</Heading> : ''}
         {from === 'capital' ? <Heading>{answer.capital}</Heading> : ''}
-        <List style={{ maxWidth: '100%', width: '35em', margin: '0 auto' }}>
+        <List style={{maxWidth: '100%', width: '35em', margin: '0 auto'}}>
           {this.renderOptions(to)}
         </List>
       </div>
@@ -64,4 +64,4 @@ class Quiz extends Component {
   }
 }
 
-export default connect(state => ({ ...state.quiz }), { answerQuiz })(Quiz);
+export default connect(state => ({...state.quiz}), {answerQuiz})(Quiz);

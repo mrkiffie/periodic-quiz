@@ -1,5 +1,5 @@
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import { lightBlue600, lightBlue700, deepOrange800 } from 'material-ui/styles/colors';
+import {lightBlue600, lightBlue700, deepOrange800} from 'material-ui/styles/colors';
 
 export default getMuiTheme({
   palette: {

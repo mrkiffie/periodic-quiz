@@ -1,5 +1,5 @@
 import {generateQuizOptions} from '../data/quiz';
-import { SELECT_COUNTRY, SET_QUIZ } from '../actions';
+import {SELECT_COUNTRY, SET_QUIZ} from '../actions';
 
 const INITIAL_STATE = {
   ...generateQuizOptions(),
