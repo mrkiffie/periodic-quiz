@@ -23,6 +23,7 @@ class Quiz extends Component {
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center',
+          textAlign: 'center',
           lineHeight: '2',
           padding: '.5em 1em'
         }}
