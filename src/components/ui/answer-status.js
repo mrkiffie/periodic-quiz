@@ -14,5 +14,5 @@ export default ({answer, selected, option}) => {
     return <NavigationClose color={red500} />;
   }
 
-  return <span style={{width: '24px'}}/>;
+  return <span style={{width: '24px'}} />;
 };

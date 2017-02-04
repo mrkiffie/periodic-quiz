@@ -15,12 +15,11 @@ class AppHeader extends Component {
         <AppBar
           title="Flag Quiz"
           onLeftIconButtonTouchTap={() => this.props.toggleMenu(true)}
-          iconElementRight={settings.score ? <Score {...quiz} /> : <span/>}
+          iconElementRight={settings.score ? <Score {...quiz} /> : <span />}
         />
         <Navigation
           open={menu.open}
           toggleMenu={this.props.toggleMenu}
-          score={settings.score}
         />
       </div>
     );

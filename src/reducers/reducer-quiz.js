@@ -1,8 +1,10 @@
 import {generateQuizOptions} from '../data/quiz';
 import {SELECT_COUNTRY, SET_QUIZ} from '../actions';
+import {REHYDRATE} from 'redux-persist/constants'
 
 const INITIAL_STATE = {
-  ...generateQuizOptions(),
+  options: null,
+  answer: null,
   score: 0,
   count: 0,
   selected: null
@@ -11,6 +13,15 @@ const INITIAL_STATE = {
 export default function (state = INITIAL_STATE, action) {
   let correct;
   switch (action.type) {
+    case REHYDRATE:
+      let {quiz} = action.payload;
+      if (!quiz || !quiz.answer) {
+        quiz = generateQuizOptions();
+      }
+      return {
+        ...state,
+        ...quiz
+      };
     case SELECT_COUNTRY:
       correct = action.payload.iso === state.answer.iso;
       return {

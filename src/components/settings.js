@@ -12,20 +12,20 @@ class Settings extends Component {
     return (
       <div>
         <ListItem
-            primaryText="Settings"
-            tabIndex={open ? 0 : -1}
-            primaryTogglesNestedList
-            nestedItems={[
-              <ListItem
-                key="toggle-score"
-                primaryText="Toggle Score"
-                rightToggle={<Toggle
-                  toggled={score}
-                  onToggle={() => this.props.toggleScore()}
-                />}
-              />,
-            ]}
-          />
+          primaryText="Settings"
+          tabIndex={open ? 0 : -1}
+          primaryTogglesNestedList
+          nestedItems={[
+            <ListItem
+              key="toggle-score"
+              primaryText="Toggle Score"
+              rightToggle={<Toggle
+                toggled={score}
+                onToggle={() => this.props.toggleScore()}
+              />}
+            />,
+          ]}
+        />
       </div>
     );
   }

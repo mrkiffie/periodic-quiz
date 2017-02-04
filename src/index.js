@@ -24,19 +24,23 @@ const store = createStore(
 )
 
 localForage.config({
-    name        : 'flag-quiz',
-    version     : 1.0,
-    storeName   : 'flagquiz'
+  name: 'flag-quiz',
+  version: 1.0,
+  storeName: 'flagquiz'
 });
 
-persistStore(store, {storage: localForage, whitelist})
+persistStore(store, {storage: localForage, whitelist});
 
 injectTapEventPlugin();
 
 ReactDOM.render(
   <Provider store={store}>
     <MuiThemeProvider muiTheme={Theme}>
-      <Router history={browserHistory} routes={routes} onUpdate={() => window.scrollTo(0, 0)} />
+      <Router
+        history={browserHistory}
+        routes={routes}
+        onUpdate={() => window.scrollTo(0, 0)}
+      />
     </MuiThemeProvider>
   </Provider>
   , document.querySelector('.container'));

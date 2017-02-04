@@ -13,7 +13,7 @@ class Debug extends Component {
     return (
       <div>
         <pre>
-        {JSON.stringify(this.props.state, null, 4)}
+          {JSON.stringify(this.props.state, null, 4)}
         </pre>
       </div>
     );

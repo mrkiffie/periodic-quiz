@@ -31,7 +31,7 @@ class Quiz extends Component {
           padding: '0em 1em'
         }}
       >
-        <span style={{width: '24px'}}/>
+        <span style={{width: '24px'}} />
         {type === 'flag' ? <Flag flag={option.flag} /> : ''}
         {type === 'country' ? option.name : ''}
         {type === 'capital' ? option.capital : ''}
@@ -53,7 +53,7 @@ class Quiz extends Component {
       <div>
         {from === 'flag' ? <Container>
           <Flag flag={answer.flag} large />
-        </Container> : '' }
+        </Container> : ''}
         {from === 'country' ? <Heading>{answer.name}</Heading> : ''}
         {from === 'capital' ? <Heading>{answer.capital}</Heading> : ''}
         <List style={{maxWidth: '100%', width: '35em', margin: '0 auto'}}>

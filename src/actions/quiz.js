@@ -16,6 +16,7 @@ export const loadImg = (src) => {
       img.src = src;
   });
 }
+
 export const fetchFlag = (country) => {
   return loadImg(country.flag)
     .catch(src => loadImg(src))
