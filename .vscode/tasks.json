@@ -10,7 +10,7 @@
 		{
 			"taskName": "start",
 			"args": ["run", "start"],
-      "isWatching": true
+      "isBackground": true
 		},
 		{
 			"taskName": "test",
