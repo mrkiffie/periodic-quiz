@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
 import Drawer from 'material-ui/Drawer';
 import List from 'material-ui/List/List';
 import ListItem from 'material-ui/List/ListItem';
@@ -7,6 +8,7 @@ import NavigationClose from 'material-ui/svg-icons/navigation/close';
 import muiThemeable from 'material-ui/styles/muiThemeable';
 import Link from 'react-router/lib/Link';
 import Settings from './settings';
+import {resetScore} from '../actions';
 
 class Navigation extends Component {
 
@@ -67,6 +69,11 @@ class Navigation extends Component {
           <List>
             <Settings />
             <ListItem
+              primaryText="Reset Score"
+              tabIndex={open ? 0 : -1}
+              onClick={() => this.props.resetScore()}
+            />
+            <ListItem
               containerElement={<Link to="/about" />}
               primaryText="About"
               tabIndex={open ? 0 : -1}
@@ -79,4 +86,4 @@ class Navigation extends Component {
   }
 }
 
-export default muiThemeable()(Navigation);
+export default muiThemeable()(connect(null, {resetScore})(Navigation));

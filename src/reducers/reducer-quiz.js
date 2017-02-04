@@ -1,5 +1,5 @@
 import {generateQuizOptions} from '../data/quiz';
-import {SELECT_COUNTRY, SET_QUIZ} from '../actions';
+import {SELECT_COUNTRY, SET_QUIZ, RESET_SCORE} from '../actions';
 import {REHYDRATE} from 'redux-persist/constants'
 
 const INITIAL_STATE = {
@@ -35,6 +35,12 @@ export default function (state = INITIAL_STATE, action) {
         ...state,
         ...action.payload,
         selected: null,
+      };
+    case RESET_SCORE:
+      return {
+        ...state,
+        score: 0,
+        count: 0
       };
     default:
       return state;
