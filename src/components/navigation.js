@@ -31,7 +31,11 @@ class Navigation extends Component {
 
     return (
       <div>
-        <Drawer open={open}>
+        <Drawer
+          open={open}
+          docked={false}
+          onRequestChange={() => this.onCLick(0)}
+        >
           <List style={{paddingTop: 0, textAlign: 'left'}}>
             <ListItem
               onClick={() => this.onCLick(0)}
