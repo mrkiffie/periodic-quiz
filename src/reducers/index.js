@@ -14,3 +14,5 @@ const rootReducer = combineReducers({
 });
 
 export default rootReducer;
+
+export const whitelist = ['settings', 'quiz'];
