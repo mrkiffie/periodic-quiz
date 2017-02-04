@@ -3,10 +3,10 @@ import Drawer from 'material-ui/Drawer';
 import List from 'material-ui/List/List';
 import ListItem from 'material-ui/List/ListItem';
 import Divider from 'material-ui/Divider';
-import Toggle from 'material-ui/Toggle';
 import NavigationClose from 'material-ui/svg-icons/navigation/close';
 import muiThemeable from 'material-ui/styles/muiThemeable';
 import Link from 'react-router/lib/Link';
+import Settings from './settings';
 
 class Navigation extends Component {
 
@@ -27,7 +27,7 @@ class Navigation extends Component {
       { route: '/flag-list', text: 'Flag List' },
     ];
 
-    const { open, muiTheme, score } = this.props;
+    const { open, muiTheme } = this.props;
 
     return (
       <div>
@@ -61,21 +61,7 @@ class Navigation extends Component {
           </List>
           <Divider />
           <List>
-            <ListItem
-              primaryText="Settings"
-              tabIndex={open ? 0 : -1}
-              primaryTogglesNestedList
-              nestedItems={[
-                <ListItem
-                  key="toggle-score"
-                  primaryText="Toggle Score"
-                  rightToggle={<Toggle
-                    toggled={this.props.score}
-                    onToggle={() => this.props.toggleScore()}
-                  />}
-                />,
-              ]}
-            />
+            <Settings />
             <ListItem
               containerElement={<Link to="/about" />}
               primaryText="About"

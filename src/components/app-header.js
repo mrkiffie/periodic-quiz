@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { AppBar } from 'material-ui';
 import Navigation from './navigation';
-import { toggleMenu, toggleScore } from '../actions';
+import { toggleMenu } from '../actions';
 import Score from './score';
 
 class AppHeader extends Component {
@@ -20,7 +20,6 @@ class AppHeader extends Component {
         <Navigation
           open={menu.open}
           toggleMenu={this.props.toggleMenu}
-          toggleScore={this.props.toggleScore}
           score={settings.score}
         />
       </div>
@@ -28,4 +27,4 @@ class AppHeader extends Component {
   }
 }
 
-export default connect(state => ({ menu: state.menu, settings: state.settings, quiz: state.quiz }), { toggleMenu, toggleScore })(AppHeader);
+export default connect(state => ({ menu: state.menu, settings: state.settings, quiz: state.quiz }), { toggleMenu })(AppHeader);
