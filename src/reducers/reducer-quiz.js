@@ -20,7 +20,8 @@ export default function (state = INITIAL_STATE, action) {
       }
       return {
         ...state,
-        ...quiz
+        ...quiz,
+        selected: null
       };
     case SELECT_COUNTRY:
       correct = action.payload.iso === state.answer.iso;
