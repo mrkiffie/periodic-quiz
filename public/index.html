@@ -1,10 +1,11 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Flag Quiz</title>
-    <style>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="manifest" href="manifest.json">
+  <title>Flag Quiz</title>
+  <style>
     body {
       background: #eee;
       color: #333;
@@ -14,9 +15,17 @@
       font-size: calc(10px + 1.5vmin);
       line-height: 1.5;
     }
-    </style>
-  </head>
-  <body>
-    <div class="container"></div>
-  </body>
+  </style>
+</head>
+<body>
+  <div class="container"></div>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js').catch(function (ex) {
+        console.warn(ex);
+        console.warn('(This warning can be safely ignored outside of the production build.)');
+      });
+    }
+  </script>
+</body>
 </html>

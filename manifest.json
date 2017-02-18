@@ -1,0 +1,21 @@
+{
+  "lang": "en",
+  "short_name": "Flag Quiz",
+  "name": "Flag Quiz",
+  "description": "A simple Xylophone using the Web Audio API",
+  "start_url": "./",
+  "display": "standalone",
+  "theme_color": "#08f",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "flag-quiz.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+
+      "src": "flag-quiz.svg"
+    }
+  ]
+}

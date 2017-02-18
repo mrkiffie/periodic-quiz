@@ -8,7 +8,7 @@
   "private": true,
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build  && cp manifest.json build/ && sw-precache --root='build/' --static-file-globs='build/**/!(*map*)'",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "lint": "./node_modules/eslint/bin/eslint.js src/",
@@ -37,10 +37,12 @@
     "eslint-plugin-import": "^2.0.1",
     "eslint-plugin-jsx-a11y": "^2.2.3",
     "eslint-plugin-react": "^6.4.1",
-    "react-scripts": "0.8.4"
+    "react-scripts": "0.8.4",
+    "sw-precache": "^5.0.0"
   },
   "description": "A simple flag quiz",
   "author": {
     "name": "Kiffie Liversage"
-  }
+  },
+  "homepage": "./"
 }
