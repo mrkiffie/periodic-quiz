@@ -4,6 +4,7 @@ import CountryListReducer from './reducer-country-list';
 import CountryReducer from './reducer-country';
 import MenuReducer from './reducer-menu';
 import SettingsReducer from './reducer-settings';
+import SearchReducer from './reducer-search';
 
 const rootReducer = combineReducers({
   settings: SettingsReducer,
@@ -11,6 +12,7 @@ const rootReducer = combineReducers({
   quiz: QuizReducer,
   countries: CountryListReducer,
   country: CountryReducer,
+  search: SearchReducer
 });
 
 export default rootReducer;

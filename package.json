@@ -19,12 +19,13 @@
   "dependencies": {
     "eslint-config-react-app": "^0.5.0",
     "localforage": "^1.4.3",
-    "material-ui": "^0.16.7",
+    "material-ui": "^0.17.1",
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
     "react-redux": "^5.0.1",
     "react-router": "^3.0.0",
     "react-tap-event-plugin": "^2.0.1",
+    "react-virtualized": "^9.3.0",
     "redux": "^3.6.0",
     "redux-persist": "^4.1.1",
     "redux-thunk": "^2.2.0"
@@ -32,12 +33,12 @@
   "devDependencies": {
     "babel-eslint": "^7.0.0",
     "eslint": "^3.8.1",
-    "eslint-config-react-app": "^0.5.0",
+    "eslint-config-react-app": "^0.6.2",
     "eslint-plugin-flowtype": "^2.21.0",
     "eslint-plugin-import": "^2.0.1",
     "eslint-plugin-jsx-a11y": "^2.2.3",
     "eslint-plugin-react": "^6.4.1",
-    "react-scripts": "0.8.4",
+    "react-scripts": "^0.9.5",
     "sw-precache": "^5.0.0"
   },
   "description": "A simple flag quiz",

@@ -1,13 +1,68 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {FlagList} from './ui';
+import Link from 'react-router/lib/Link';
+import {List, AutoSizer} from 'react-virtualized';
+import ListItem from 'material-ui/List/ListItem';
+import Flag from './ui/flag';
+import {Search} from './ui/search';
+
+import {setSearchTerm} from '../actions';
 
 class FlagListIndex extends Component {
-  render() {
+
+  constructor(props) {
+    super(props);
+    this.rowRenderer = this.rowRenderer.bind(this);
+    this.onChange = this.onChange.bind(this);
+  }
+
+  rowRenderer({key, index, style}) {
+    const {filteredCountries = []} = this.props.search;
+    const country = filteredCountries[index];
+
+    if (!country) {
+      return null;
+    }
+
     return (
-      <FlagList countries={this.props.countries} />
+      <ListItem
+        containerElement={<Link to={`/countries/${country.iso}`} />}
+        key={key}
+        style={style}
+      >
+        <div style={{textAlign: 'center', marginBottom: '.5em'}}>
+          {country.name}, {country.capital}
+        </div>
+        <Flag flag={country.flag} />
+      </ListItem>
+    )
+  }
+
+  onChange(e, term) {
+    this.props.setSearchTerm(term);
+  }
+
+  render() {
+    const {term, filteredCountries} = this.props.search;
+    return (
+      <div style={{display: 'flex', flexDirection: 'column', flex: 1}}>
+        <Search value={term} onChange={this.onChange}/>
+        <div style={{display: 'flex', flexDirection: 'column', flex: 1}}>
+          <AutoSizer>
+            {({height, width}) => (
+              <List
+                width={width}
+                height={height}
+                rowCount={filteredCountries.length}
+                rowHeight={120}
+                rowRenderer={this.rowRenderer}
+              />
+            )}
+          </AutoSizer>
+        </div>
+      </div>
     );
   }
 }
 
-export default connect(state => ({countries: state.countries}))(FlagListIndex);
+export default connect(state => ({search: state.search}), {setSearchTerm})(FlagListIndex);

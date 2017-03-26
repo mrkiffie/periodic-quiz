@@ -36,6 +36,7 @@ class Navigation extends Component {
         <Drawer
           open={open}
           docked={false}
+          disableSwipeToOpen={true}
           onRequestChange={() => this.onCLick(0)}
         >
           <List style={{paddingTop: 0, textAlign: 'left'}}>
