@@ -13,7 +13,7 @@ export default ({flag, large = false, onLoad}) => {
   return (
     <div style={{width: '100%'}}>
       <img
-        src={flag}
+        src={`/${flag.replace(/^\//, '')}`}
         alt="Flag"
         style={flagStyle}
         onLoad={onLoad}
