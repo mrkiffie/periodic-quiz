@@ -5,7 +5,7 @@ export default ({flag, large = false, onLoad}) => {
     width: 'auto',
     height: 'auto',
     maxWidth: '100%',
-    maxHeight: large ? '50vh' : '4em',
+    maxHeight: large ? '45vh' : '4em',
     display: 'block',
     margin: '0 auto'
   };
