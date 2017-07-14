@@ -2,7 +2,7 @@ export default class Random {
 
   static getRandomRange(array, count) {
     return this.shuffleArray(array)
-            .slice(0, count);
+      .slice(0, count);
   }
 
   static shuffleArray(originalArray) {

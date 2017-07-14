@@ -1,7 +1,7 @@
 import React from 'react';
 import TextField from 'material-ui/TextField';
 
-export const Search = ({value, onChange}) =>  (
+export const Search = ({value, onChange}) => (
   <TextField
     value={value}
     onChange={onChange}

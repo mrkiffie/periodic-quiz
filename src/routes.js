@@ -19,7 +19,7 @@ export default () => (
           <CountryDetail params={match.params} />
         )} />
         <Route path="/:from-:to" render={({match}) => (
-          <Quiz params={match.params}/>
+          <Quiz params={match.params} />
         )} />
       </Switch>
     </App>

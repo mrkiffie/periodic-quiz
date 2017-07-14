@@ -46,7 +46,7 @@ class FlagListIndex extends Component {
     const {term, filteredCountries} = this.props.search;
     return (
       <div style={{position: 'absolute', top: 64, left: 0, right: 0, bottom: 0}}>
-        <Search value={term} onChange={this.onChange}/>
+        <Search value={term} onChange={this.onChange} />
         <div style={{position: 'absolute', top: 48, left: 0, right: 0, bottom: 0}}>
           <AutoSizer>
             {({height, width}) => (

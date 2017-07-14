@@ -8,7 +8,7 @@ const INITIAL_STATE = {
 
 export default (state = {}, action) => {
   switch (action.type) {
-      case REHYDRATE:
+    case REHYDRATE:
       const {settings} = action.payload;
       return {
         ...INITIAL_STATE,
