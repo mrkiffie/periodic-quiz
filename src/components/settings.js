@@ -7,7 +7,7 @@ import {toggleScore} from '../actions';
 class Settings extends Component {
 
   render() {
-    const {score} = this.props;
+    const {score, open} = this.props;
 
     return (
       <div>

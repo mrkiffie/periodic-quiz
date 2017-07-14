@@ -1,196 +1,395 @@
-import AFG from '../svg/afg.svg'; export {AFG};
-import ALB from '../svg/alb.svg'; export {ALB};
-import DZA from '../svg/dza.svg'; export {DZA};
-import AND from '../svg/and.svg'; export {AND};
-import AGO from '../svg/ago.svg'; export {AGO};
-import ATG from '../svg/atg.svg'; export {ATG};
-import ARG from '../svg/arg.svg'; export {ARG};
-import ARM from '../svg/arm.svg'; export {ARM};
-import AUS from '../svg/aus.svg'; export {AUS};
-import AUT from '../svg/aut.svg'; export {AUT};
-import AZE from '../svg/aze.svg'; export {AZE};
-import BHS from '../svg/bhs.svg'; export {BHS};
-import BHR from '../svg/bhr.svg'; export {BHR};
-import BGD from '../svg/bgd.svg'; export {BGD};
-import BRB from '../svg/brb.svg'; export {BRB};
-import BLR from '../svg/blr.svg'; export {BLR};
-import BEL from '../svg/bel.svg'; export {BEL};
-import BLZ from '../svg/blz.svg'; export {BLZ};
-import BEN from '../svg/ben.svg'; export {BEN};
-import BTN from '../svg/btn.svg'; export {BTN};
-import BOL from '../svg/bol.svg'; export {BOL};
-import BIH from '../svg/bih.svg'; export {BIH};
-import BWA from '../svg/bwa.svg'; export {BWA};
-import BRA from '../svg/bra.svg'; export {BRA};
-import BRN from '../svg/brn.svg'; export {BRN};
-import BGR from '../svg/bgr.svg'; export {BGR};
-import BFA from '../svg/bfa.svg'; export {BFA};
-import BDI from '../svg/bdi.svg'; export {BDI};
-import KHM from '../svg/khm.svg'; export {KHM};
-import CMR from '../svg/cmr.svg'; export {CMR};
-import CAN from '../svg/can.svg'; export {CAN};
-import CPV from '../svg/cpv.svg'; export {CPV};
-import CAF from '../svg/caf.svg'; export {CAF};
-import TCD from '../svg/tcd.svg'; export {TCD};
-import CHL from '../svg/chl.svg'; export {CHL};
-import CHN from '../svg/chn.svg'; export {CHN};
-import COL from '../svg/col.svg'; export {COL};
-import COM from '../svg/com.svg'; export {COM};
-import CRI from '../svg/cri.svg'; export {CRI};
-import HRV from '../svg/hrv.svg'; export {HRV};
-import CUB from '../svg/cub.svg'; export {CUB};
-import CYP from '../svg/cyp.svg'; export {CYP};
-import CZE from '../svg/cze.svg'; export {CZE};
-import COD from '../svg/cod.svg'; export {COD};
-import DNK from '../svg/dnk.svg'; export {DNK};
-import DJI from '../svg/dji.svg'; export {DJI};
-import DMA from '../svg/dma.svg'; export {DMA};
-import DOM from '../svg/dom.svg'; export {DOM};
-import TLS from '../svg/tls.svg'; export {TLS};
-import ECU from '../svg/ecu.svg'; export {ECU};
-import EGY from '../svg/egy.svg'; export {EGY};
-import SLV from '../svg/slv.svg'; export {SLV};
-import GNQ from '../svg/gnq.svg'; export {GNQ};
-import ERI from '../svg/eri.svg'; export {ERI};
-import EST from '../svg/est.svg'; export {EST};
-import ETH from '../svg/eth.svg'; export {ETH};
-import FJI from '../svg/fji.svg'; export {FJI};
-import FIN from '../svg/fin.svg'; export {FIN};
-import FRA from '../svg/fra.svg'; export {FRA};
-import GAB from '../svg/gab.svg'; export {GAB};
-import GMB from '../svg/gmb.svg'; export {GMB};
-import GEO from '../svg/geo.svg'; export {GEO};
-import DEU from '../svg/deu.svg'; export {DEU};
-import GHA from '../svg/gha.svg'; export {GHA};
-import GRC from '../svg/grc.svg'; export {GRC};
-import GRD from '../svg/grd.svg'; export {GRD};
-import GTM from '../svg/gtm.svg'; export {GTM};
-import GIN from '../svg/gin.svg'; export {GIN};
-import GNB from '../svg/gnb.svg'; export {GNB};
-import GUY from '../svg/guy.svg'; export {GUY};
-import HTI from '../svg/hti.svg'; export {HTI};
-import HND from '../svg/hnd.svg'; export {HND};
-import HUN from '../svg/hun.svg'; export {HUN};
-import ISL from '../svg/isl.svg'; export {ISL};
-import IND from '../svg/ind.svg'; export {IND};
-import IDN from '../svg/idn.svg'; export {IDN};
-import IRN from '../svg/irn.svg'; export {IRN};
-import IRQ from '../svg/irq.svg'; export {IRQ};
-import IRL from '../svg/irl.svg'; export {IRL};
-import ISR from '../svg/isr.svg'; export {ISR};
-import ITA from '../svg/ita.svg'; export {ITA};
-import CIV from '../svg/civ.svg'; export {CIV};
-import JAM from '../svg/jam.svg'; export {JAM};
-import JPN from '../svg/jpn.svg'; export {JPN};
-import JOR from '../svg/jor.svg'; export {JOR};
-import KAZ from '../svg/kaz.svg'; export {KAZ};
-import KEN from '../svg/ken.svg'; export {KEN};
-import KIR from '../svg/kir.svg'; export {KIR};
-import KWT from '../svg/kwt.svg'; export {KWT};
-import KGZ from '../svg/kgz.svg'; export {KGZ};
-import LAO from '../svg/lao.svg'; export {LAO};
-import LVA from '../svg/lva.svg'; export {LVA};
-import LBN from '../svg/lbn.svg'; export {LBN};
-import LSO from '../svg/lso.svg'; export {LSO};
-import LBR from '../svg/lbr.svg'; export {LBR};
-import LBY from '../svg/lby.svg'; export {LBY};
-import LIE from '../svg/lie.svg'; export {LIE};
-import LTU from '../svg/ltu.svg'; export {LTU};
-import LUX from '../svg/lux.svg'; export {LUX};
-import MKD from '../svg/mkd.svg'; export {MKD};
-import MDG from '../svg/mdg.svg'; export {MDG};
-import MWI from '../svg/mwi.svg'; export {MWI};
-import MYS from '../svg/mys.svg'; export {MYS};
-import MDV from '../svg/mdv.svg'; export {MDV};
-import MLI from '../svg/mli.svg'; export {MLI};
-import MLT from '../svg/mlt.svg'; export {MLT};
-import MHL from '../svg/mhl.svg'; export {MHL};
-import MRT from '../svg/mrt.svg'; export {MRT};
-import MUS from '../svg/mus.svg'; export {MUS};
-import MEX from '../svg/mex.svg'; export {MEX};
-import FSM from '../svg/fsm.svg'; export {FSM};
-import MDA from '../svg/mda.svg'; export {MDA};
-import MCO from '../svg/mco.svg'; export {MCO};
-import MNG from '../svg/mng.svg'; export {MNG};
-import MNE from '../svg/mne.svg'; export {MNE};
-import MAR from '../svg/mar.svg'; export {MAR};
-import MOZ from '../svg/moz.svg'; export {MOZ};
-import MMR from '../svg/mmr.svg'; export {MMR};
-import NAM from '../svg/nam.svg'; export {NAM};
-import NRU from '../svg/nru.svg'; export {NRU};
-import NPL from '../svg/npl.svg'; export {NPL};
-import NLD from '../svg/nld.svg'; export {NLD};
-import NZL from '../svg/nzl.svg'; export {NZL};
-import NIC from '../svg/nic.svg'; export {NIC};
-import NER from '../svg/ner.svg'; export {NER};
-import NGA from '../svg/nga.svg'; export {NGA};
-import NIU from '../svg/niu.svg'; export {NIU};
-import PRK from '../svg/prk.svg'; export {PRK};
-import NOR from '../svg/nor.svg'; export {NOR};
-import OMN from '../svg/omn.svg'; export {OMN};
-import PAK from '../svg/pak.svg'; export {PAK};
-import PLW from '../svg/plw.svg'; export {PLW};
-import PSE from '../svg/pse.svg'; export {PSE};
-import PAN from '../svg/pan.svg'; export {PAN};
-import PNG from '../svg/png.svg'; export {PNG};
-import PRY from '../svg/pry.svg'; export {PRY};
-import PER from '../svg/per.svg'; export {PER};
-import PHL from '../svg/phl.svg'; export {PHL};
-import POL from '../svg/pol.svg'; export {POL};
-import PRT from '../svg/prt.svg'; export {PRT};
-import QAT from '../svg/qat.svg'; export {QAT};
-import COG from '../svg/cog.svg'; export {COG};
-import ROU from '../svg/rou.svg'; export {ROU};
-import RUS from '../svg/rus.svg'; export {RUS};
-import RWA from '../svg/rwa.svg'; export {RWA};
-import KNA from '../svg/kna.svg'; export {KNA};
-import LCA from '../svg/lca.svg'; export {LCA};
-import VCT from '../svg/vct.svg'; export {VCT};
-import WSM from '../svg/wsm.svg'; export {WSM};
-import SMR from '../svg/smr.svg'; export {SMR};
-import STP from '../svg/stp.svg'; export {STP};
-import SAU from '../svg/sau.svg'; export {SAU};
-import SEN from '../svg/sen.svg'; export {SEN};
-import SRB from '../svg/srb.svg'; export {SRB};
-import SYC from '../svg/syc.svg'; export {SYC};
-import SLE from '../svg/sle.svg'; export {SLE};
-import SGP from '../svg/sgp.svg'; export {SGP};
-import SVK from '../svg/svk.svg'; export {SVK};
-import SVN from '../svg/svn.svg'; export {SVN};
-import SLB from '../svg/slb.svg'; export {SLB};
-import SOM from '../svg/som.svg'; export {SOM};
-import ZAF from '../svg/zaf.svg'; export {ZAF};
-import KOR from '../svg/kor.svg'; export {KOR};
-import SSD from '../svg/ssd.svg'; export {SSD};
-import ESP from '../svg/esp.svg'; export {ESP};
-import LKA from '../svg/lka.svg'; export {LKA};
-import SDN from '../svg/sdn.svg'; export {SDN};
-import SUR from '../svg/sur.svg'; export {SUR};
-import SWZ from '../svg/swz.svg'; export {SWZ};
-import SWE from '../svg/swe.svg'; export {SWE};
-import CHE from '../svg/che.svg'; export {CHE};
-import SYR from '../svg/syr.svg'; export {SYR};
-import TJK from '../svg/tjk.svg'; export {TJK};
-import TZA from '../svg/tza.svg'; export {TZA};
-import THA from '../svg/tha.svg'; export {THA};
-import TGO from '../svg/tgo.svg'; export {TGO};
-import TON from '../svg/ton.svg'; export {TON};
-import TTO from '../svg/tto.svg'; export {TTO};
-import TUN from '../svg/tun.svg'; export {TUN};
-import TUR from '../svg/tur.svg'; export {TUR};
-import TKM from '../svg/tkm.svg'; export {TKM};
-import TUV from '../svg/tuv.svg'; export {TUV};
-import UGA from '../svg/uga.svg'; export {UGA};
-import UKR from '../svg/ukr.svg'; export {UKR};
-import ARE from '../svg/are.svg'; export {ARE};
-import GBR from '../svg/gbr.svg'; export {GBR};
-import USA from '../svg/usa.svg'; export {USA};
-import URY from '../svg/ury.svg'; export {URY};
-import UZB from '../svg/uzb.svg'; export {UZB};
-import VUT from '../svg/vut.svg'; export {VUT};
-import VAT from '../svg/vat.svg'; export {VAT};
-import VEN from '../svg/ven.svg'; export {VEN};
-import VNM from '../svg/vnm.svg'; export {VNM};
-import YEM from '../svg/yem.svg'; export {YEM};
-import ZMB from '../svg/zmb.svg'; export {ZMB};
-import ZWE from '../svg/zwe.svg'; export {ZWE};
+import AFG from '../svg/afg.svg';
+import ALB from '../svg/alb.svg';
+import DZA from '../svg/dza.svg';
+import AND from '../svg/and.svg';
+import AGO from '../svg/ago.svg';
+import ATG from '../svg/atg.svg';
+import ARG from '../svg/arg.svg';
+import ARM from '../svg/arm.svg';
+import AUS from '../svg/aus.svg';
+import AUT from '../svg/aut.svg';
+import AZE from '../svg/aze.svg';
+import BHS from '../svg/bhs.svg';
+import BHR from '../svg/bhr.svg';
+import BGD from '../svg/bgd.svg';
+import BRB from '../svg/brb.svg';
+import BLR from '../svg/blr.svg';
+import BEL from '../svg/bel.svg';
+import BLZ from '../svg/blz.svg';
+import BEN from '../svg/ben.svg';
+import BTN from '../svg/btn.svg';
+import BOL from '../svg/bol.svg';
+import BIH from '../svg/bih.svg';
+import BWA from '../svg/bwa.svg';
+import BRA from '../svg/bra.svg';
+import BRN from '../svg/brn.svg';
+import BGR from '../svg/bgr.svg';
+import BFA from '../svg/bfa.svg';
+import BDI from '../svg/bdi.svg';
+import KHM from '../svg/khm.svg';
+import CMR from '../svg/cmr.svg';
+import CAN from '../svg/can.svg';
+import CPV from '../svg/cpv.svg';
+import CAF from '../svg/caf.svg';
+import TCD from '../svg/tcd.svg';
+import CHL from '../svg/chl.svg';
+import CHN from '../svg/chn.svg';
+import COL from '../svg/col.svg';
+import COM from '../svg/com.svg';
+import CRI from '../svg/cri.svg';
+import HRV from '../svg/hrv.svg';
+import CUB from '../svg/cub.svg';
+import CYP from '../svg/cyp.svg';
+import CZE from '../svg/cze.svg';
+import COD from '../svg/cod.svg';
+import DNK from '../svg/dnk.svg';
+import DJI from '../svg/dji.svg';
+import DMA from '../svg/dma.svg';
+import DOM from '../svg/dom.svg';
+import TLS from '../svg/tls.svg';
+import ECU from '../svg/ecu.svg';
+import EGY from '../svg/egy.svg';
+import SLV from '../svg/slv.svg';
+import GNQ from '../svg/gnq.svg';
+import ERI from '../svg/eri.svg';
+import EST from '../svg/est.svg';
+import ETH from '../svg/eth.svg';
+import FJI from '../svg/fji.svg';
+import FIN from '../svg/fin.svg';
+import FRA from '../svg/fra.svg';
+import GAB from '../svg/gab.svg';
+import GMB from '../svg/gmb.svg';
+import GEO from '../svg/geo.svg';
+import DEU from '../svg/deu.svg';
+import GHA from '../svg/gha.svg';
+import GRC from '../svg/grc.svg';
+import GRD from '../svg/grd.svg';
+import GTM from '../svg/gtm.svg';
+import GIN from '../svg/gin.svg';
+import GNB from '../svg/gnb.svg';
+import GUY from '../svg/guy.svg';
+import HTI from '../svg/hti.svg';
+import HND from '../svg/hnd.svg';
+import HUN from '../svg/hun.svg';
+import ISL from '../svg/isl.svg';
+import IND from '../svg/ind.svg';
+import IDN from '../svg/idn.svg';
+import IRN from '../svg/irn.svg';
+import IRQ from '../svg/irq.svg';
+import IRL from '../svg/irl.svg';
+import ISR from '../svg/isr.svg';
+import ITA from '../svg/ita.svg';
+import CIV from '../svg/civ.svg';
+import JAM from '../svg/jam.svg';
+import JPN from '../svg/jpn.svg';
+import JOR from '../svg/jor.svg';
+import KAZ from '../svg/kaz.svg';
+import KEN from '../svg/ken.svg';
+import KIR from '../svg/kir.svg';
+import KWT from '../svg/kwt.svg';
+import KGZ from '../svg/kgz.svg';
+import LAO from '../svg/lao.svg';
+import LVA from '../svg/lva.svg';
+import LBN from '../svg/lbn.svg';
+import LSO from '../svg/lso.svg';
+import LBR from '../svg/lbr.svg';
+import LBY from '../svg/lby.svg';
+import LIE from '../svg/lie.svg';
+import LTU from '../svg/ltu.svg';
+import LUX from '../svg/lux.svg';
+import MKD from '../svg/mkd.svg';
+import MDG from '../svg/mdg.svg';
+import MWI from '../svg/mwi.svg';
+import MYS from '../svg/mys.svg';
+import MDV from '../svg/mdv.svg';
+import MLI from '../svg/mli.svg';
+import MLT from '../svg/mlt.svg';
+import MHL from '../svg/mhl.svg';
+import MRT from '../svg/mrt.svg';
+import MUS from '../svg/mus.svg';
+import MEX from '../svg/mex.svg';
+import FSM from '../svg/fsm.svg';
+import MDA from '../svg/mda.svg';
+import MCO from '../svg/mco.svg';
+import MNG from '../svg/mng.svg';
+import MNE from '../svg/mne.svg';
+import MAR from '../svg/mar.svg';
+import MOZ from '../svg/moz.svg';
+import MMR from '../svg/mmr.svg';
+import NAM from '../svg/nam.svg';
+import NRU from '../svg/nru.svg';
+import NPL from '../svg/npl.svg';
+import NLD from '../svg/nld.svg';
+import NZL from '../svg/nzl.svg';
+import NIC from '../svg/nic.svg';
+import NER from '../svg/ner.svg';
+import NGA from '../svg/nga.svg';
+import NIU from '../svg/niu.svg';
+import PRK from '../svg/prk.svg';
+import NOR from '../svg/nor.svg';
+import OMN from '../svg/omn.svg';
+import PAK from '../svg/pak.svg';
+import PLW from '../svg/plw.svg';
+import PSE from '../svg/pse.svg';
+import PAN from '../svg/pan.svg';
+import PNG from '../svg/png.svg';
+import PRY from '../svg/pry.svg';
+import PER from '../svg/per.svg';
+import PHL from '../svg/phl.svg';
+import POL from '../svg/pol.svg';
+import PRT from '../svg/prt.svg';
+import QAT from '../svg/qat.svg';
+import COG from '../svg/cog.svg';
+import ROU from '../svg/rou.svg';
+import RUS from '../svg/rus.svg';
+import RWA from '../svg/rwa.svg';
+import KNA from '../svg/kna.svg';
+import LCA from '../svg/lca.svg';
+import VCT from '../svg/vct.svg';
+import WSM from '../svg/wsm.svg';
+import SMR from '../svg/smr.svg';
+import STP from '../svg/stp.svg';
+import SAU from '../svg/sau.svg';
+import SEN from '../svg/sen.svg';
+import SRB from '../svg/srb.svg';
+import SYC from '../svg/syc.svg';
+import SLE from '../svg/sle.svg';
+import SGP from '../svg/sgp.svg';
+import SVK from '../svg/svk.svg';
+import SVN from '../svg/svn.svg';
+import SLB from '../svg/slb.svg';
+import SOM from '../svg/som.svg';
+import ZAF from '../svg/zaf.svg';
+import KOR from '../svg/kor.svg';
+import SSD from '../svg/ssd.svg';
+import ESP from '../svg/esp.svg';
+import LKA from '../svg/lka.svg';
+import SDN from '../svg/sdn.svg';
+import SUR from '../svg/sur.svg';
+import SWZ from '../svg/swz.svg';
+import SWE from '../svg/swe.svg';
+import CHE from '../svg/che.svg';
+import SYR from '../svg/syr.svg';
+import TJK from '../svg/tjk.svg';
+import TZA from '../svg/tza.svg';
+import THA from '../svg/tha.svg';
+import TGO from '../svg/tgo.svg';
+import TON from '../svg/ton.svg';
+import TTO from '../svg/tto.svg';
+import TUN from '../svg/tun.svg';
+import TUR from '../svg/tur.svg';
+import TKM from '../svg/tkm.svg';
+import TUV from '../svg/tuv.svg';
+import UGA from '../svg/uga.svg';
+import UKR from '../svg/ukr.svg';
+import ARE from '../svg/are.svg';
+import GBR from '../svg/gbr.svg';
+import USA from '../svg/usa.svg';
+import URY from '../svg/ury.svg';
+import UZB from '../svg/uzb.svg';
+import VUT from '../svg/vut.svg';
+import VAT from '../svg/vat.svg';
+import VEN from '../svg/ven.svg';
+import VNM from '../svg/vnm.svg';
+import YEM from '../svg/yem.svg';
+import ZMB from '../svg/zmb.svg';
+import ZWE from '../svg/zwe.svg';
+
+export {
+  AFG,
+  ALB,
+  DZA,
+  AND,
+  AGO,
+  ATG,
+  ARG,
+  ARM,
+  AUS,
+  AUT,
+  AZE,
+  BHS,
+  BHR,
+  BGD,
+  BRB,
+  BLR,
+  BEL,
+  BLZ,
+  BEN,
+  BTN,
+  BOL,
+  BIH,
+  BWA,
+  BRA,
+  BRN,
+  BGR,
+  BFA,
+  BDI,
+  KHM,
+  CMR,
+  CAN,
+  CPV,
+  CAF,
+  TCD,
+  CHL,
+  CHN,
+  COL,
+  COM,
+  CRI,
+  HRV,
+  CUB,
+  CYP,
+  CZE,
+  COD,
+  DNK,
+  DJI,
+  DMA,
+  DOM,
+  TLS,
+  ECU,
+  EGY,
+  SLV,
+  GNQ,
+  ERI,
+  EST,
+  ETH,
+  FJI,
+  FIN,
+  FRA,
+  GAB,
+  GMB,
+  GEO,
+  DEU,
+  GHA,
+  GRC,
+  GRD,
+  GTM,
+  GIN,
+  GNB,
+  GUY,
+  HTI,
+  HND,
+  HUN,
+  ISL,
+  IND,
+  IDN,
+  IRN,
+  IRQ,
+  IRL,
+  ISR,
+  ITA,
+  CIV,
+  JAM,
+  JPN,
+  JOR,
+  KAZ,
+  KEN,
+  KIR,
+  KWT,
+  KGZ,
+  LAO,
+  LVA,
+  LBN,
+  LSO,
+  LBR,
+  LBY,
+  LIE,
+  LTU,
+  LUX,
+  MKD,
+  MDG,
+  MWI,
+  MYS,
+  MDV,
+  MLI,
+  MLT,
+  MHL,
+  MRT,
+  MUS,
+  MEX,
+  FSM,
+  MDA,
+  MCO,
+  MNG,
+  MNE,
+  MAR,
+  MOZ,
+  MMR,
+  NAM,
+  NRU,
+  NPL,
+  NLD,
+  NZL,
+  NIC,
+  NER,
+  NGA,
+  NIU,
+  PRK,
+  NOR,
+  OMN,
+  PAK,
+  PLW,
+  PSE,
+  PAN,
+  PNG,
+  PRY,
+  PER,
+  PHL,
+  POL,
+  PRT,
+  QAT,
+  COG,
+  ROU,
+  RUS,
+  RWA,
+  KNA,
+  LCA,
+  VCT,
+  WSM,
+  SMR,
+  STP,
+  SAU,
+  SEN,
+  SRB,
+  SYC,
+  SLE,
+  SGP,
+  SVK,
+  SVN,
+  SLB,
+  SOM,
+  ZAF,
+  KOR,
+  SSD,
+  ESP,
+  LKA,
+  SDN,
+  SUR,
+  SWZ,
+  SWE,
+  CHE,
+  SYR,
+  TJK,
+  TZA,
+  THA,
+  TGO,
+  TON,
+  TTO,
+  TUN,
+  TUR,
+  TKM,
+  TUV,
+  UGA,
+  UKR,
+  ARE,
+  GBR,
+  USA,
+  URY,
+  UZB,
+  VUT,
+  VAT,
+  VEN,
+  VNM,
+  YEM,
+  ZMB,
+  ZWE,
+}

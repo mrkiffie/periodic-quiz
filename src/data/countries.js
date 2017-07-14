@@ -1,3 +1,5 @@
+import * as flags from './flags';
+
 const countries = [
   {
     iso: 'AF',
@@ -2741,8 +2743,6 @@ const countries = [
     tld: '.zw',
   },
 ];
-
-import * as flags from './flags';
 
 export default countries.map(country => {
   country.flag = flags[country.iso3];
