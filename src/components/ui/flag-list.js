@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'react-router/lib/Link';
+import Link from 'react-router-dom/es/Link';
 import List from 'material-ui/List/List';
 import ListItem from 'material-ui/List/ListItem';
 import Flag from './flag';

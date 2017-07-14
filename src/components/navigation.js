@@ -6,7 +6,7 @@ import ListItem from 'material-ui/List/ListItem';
 import Divider from 'material-ui/Divider';
 import NavigationClose from 'material-ui/svg-icons/navigation/close';
 import muiThemeable from 'material-ui/styles/muiThemeable';
-import Link from 'react-router/lib/Link';
+import Link from 'react-router-dom/es/Link';
 import Settings from './settings';
 import {resetScore} from '../actions';
 

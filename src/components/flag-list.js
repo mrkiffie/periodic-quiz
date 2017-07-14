@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import Link from 'react-router/lib/Link';
+import Link from 'react-router-dom/es/Link';
 import {List, AutoSizer} from 'react-virtualized';
 import ListItem from 'material-ui/List/ListItem';
 import Flag from './ui/flag';

@@ -41,7 +41,7 @@ class Quiz extends Component {
   }
 
   render() {
-    const {answer, params} = this.props;
+    const {answer, params = {}} = this.props;
 
     if (!answer) {
       return <div />;
