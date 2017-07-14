@@ -2,7 +2,7 @@
   "lang": "en",
   "short_name": "Flag Quiz",
   "name": "Flag Quiz",
-  "description": "A simple Xylophone using the Web Audio API",
+  "description": "A simple Flag Quiz",
   "start_url": "./",
   "display": "standalone",
   "theme_color": "#08f",
