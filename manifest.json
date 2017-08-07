@@ -5,12 +5,13 @@
   "description": "A simple Flag Quiz",
   "start_url": "./",
   "display": "standalone",
+  "background_color": "#08f",
   "theme_color": "#08f",
   "orientation": "portrait",
   "icons": [
     {
-      "src": "flag-quiz.png",
-      "sizes": "192x192",
+      "src": "flag-quiz-512x512.png",
+      "sizes": "512x512",
       "type": "image/png"
     },
     {
