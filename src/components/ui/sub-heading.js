@@ -1,14 +1,13 @@
-import React from 'react';
+import React from "react";
 
-export default props => (
+export default props =>
   <h2
     style={{
-      lineHeight: '1.5',
-      margin: '0 0 .5em',
-      textAlign: 'center',
-      fontWeight: '300',
+      lineHeight: "1.5",
+      margin: "0 0 .5em",
+      textAlign: "center",
+      fontWeight: "300"
     }}
   >
     {props.children}
-  </h2>
-);
+  </h2>;

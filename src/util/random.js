@@ -1,8 +1,6 @@
 export default class Random {
-
   static getRandomRange(array, count) {
-    return this.shuffleArray(array)
-      .slice(0, count);
+    return this.shuffleArray(array).slice(0, count);
   }
 
   static shuffleArray(originalArray) {
@@ -25,5 +23,4 @@ export default class Random {
   static getRandomIntegerBetween(min, max) {
     return this.getRandomInt(max - min) + min;
   }
-
 }

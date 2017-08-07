@@ -1,10 +1,9 @@
-import React, {Component} from 'react';
-import {connect} from 'react-redux';
-import {selectCountry, loadCountry} from '../actions/index';
-import {Flag, FlagList, Container, Heading, SubHeading} from './ui';
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import { selectCountry, loadCountry } from "../actions/index";
+import { Flag, FlagList, Container, Heading, SubHeading } from "./ui";
 
 class CountryDetail extends Component {
-
   componentDidMount() {
     this.props.loadCountry(this.props.params.iso);
   }
@@ -28,8 +27,12 @@ class CountryDetail extends Component {
         <Container>
           <Flag flag={country.flag} large />
         </Container>
-        <Heading>{country.name}</Heading>
-        <SubHeading>{country.capital}</SubHeading>
+        <Heading>
+          {country.name}
+        </Heading>
+        <SubHeading>
+          {country.capital}
+        </SubHeading>
 
         <FlagList countries={country.neighbours} />
       </div>
@@ -39,8 +42,10 @@ class CountryDetail extends Component {
 
 function mapStateToProps(state) {
   return {
-    country: state.country,
+    country: state.country
   };
 }
 
-export default connect(mapStateToProps, {loadCountry, selectCountry})(CountryDetail);
+export default connect(mapStateToProps, { loadCountry, selectCountry })(
+  CountryDetail
+);

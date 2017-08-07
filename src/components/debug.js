@@ -1,10 +1,9 @@
-import React, {Component} from 'react';
-import {connect} from 'react-redux';
+import React, { Component } from "react";
+import { connect } from "react-redux";
 
 class Debug extends Component {
-
   render() {
-    const {debug} = this.props.state.settings;
+    const { debug } = this.props.state.settings;
 
     if (!debug) {
       return <div />;
@@ -20,4 +19,4 @@ class Debug extends Component {
   }
 }
 
-export default connect(state => ({state}))(Debug);
+export default connect(state => ({ state }))(Debug);

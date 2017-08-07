@@ -1,15 +1,15 @@
-import {REHYDRATE} from 'redux-persist/constants'
-import {TOGGLE_SCORE, TOGGLE_DEBUG} from '../actions';
+import { REHYDRATE } from "redux-persist/constants";
+import { TOGGLE_SCORE, TOGGLE_DEBUG } from "../actions";
 
 const INITIAL_STATE = {
   debug: false,
-  score: true,
+  score: true
 };
 
 export default (state = {}, action) => {
   switch (action.type) {
     case REHYDRATE:
-      const {settings} = action.payload;
+      const { settings } = action.payload;
       return {
         ...INITIAL_STATE,
         ...state,

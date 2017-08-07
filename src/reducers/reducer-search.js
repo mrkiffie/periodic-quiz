@@ -1,14 +1,16 @@
-import {SET_SEARCH_TERM} from '../actions';
-import countries from '../data/countries';
+import { SET_SEARCH_TERM } from "../actions";
+import countries from "../data/countries";
 
 const initialState = {
-  term: '',
+  term: "",
   filteredCountries: countries
 };
 
 export const filterCountriesByTerm = (term, countries) => {
-  const regex = new RegExp(term, 'i');
-  return countries.filter((country) => regex.test(country.name) || regex.test(country.capital));
+  const regex = new RegExp(term, "i");
+  return countries.filter(
+    country => regex.test(country.name) || regex.test(country.capital)
+  );
 };
 
 export default (state = initialState, action) => {

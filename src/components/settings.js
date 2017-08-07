@@ -1,13 +1,12 @@
-import React, {Component} from 'react';
-import {connect} from 'react-redux';
-import ListItem from 'material-ui/List/ListItem';
-import Toggle from 'material-ui/Toggle';
-import {toggleScore} from '../actions';
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import ListItem from "material-ui/List/ListItem";
+import Toggle from "material-ui/Toggle";
+import { toggleScore } from "../actions";
 
 class Settings extends Component {
-
   render() {
-    const {score, open} = this.props;
+    const { score, open } = this.props;
 
     return (
       <div>
@@ -19,11 +18,13 @@ class Settings extends Component {
             <ListItem
               key="toggle-score"
               primaryText="Toggle Score"
-              rightToggle={<Toggle
-                toggled={score}
-                onToggle={() => this.props.toggleScore()}
-              />}
-            />,
+              rightToggle={
+                <Toggle
+                  toggled={score}
+                  onToggle={() => this.props.toggleScore()}
+                />
+              }
+            />
           ]}
         />
       </div>
@@ -31,4 +32,4 @@ class Settings extends Component {
   }
 }
 
-export default connect(state => state.settings, {toggleScore})(Settings);
+export default connect(state => state.settings, { toggleScore })(Settings);
