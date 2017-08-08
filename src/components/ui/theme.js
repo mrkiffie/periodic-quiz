@@ -1,15 +1,10 @@
 import getMuiTheme from "material-ui/styles/getMuiTheme";
-import {
-  lightBlue600,
-  lightBlue700,
-  deepOrange800
-} from "material-ui/styles/colors";
 
 export default getMuiTheme({
   palette: {
-    primary1Color: lightBlue600,
-    primary2Color: lightBlue700,
-    accent1Color: deepOrange800
+    primary1Color: "#08f",
+    primary2Color: "#08f",
+    accent1Color: "#ff5e00"
   },
   appBar: {
     titleFontWeight: 300

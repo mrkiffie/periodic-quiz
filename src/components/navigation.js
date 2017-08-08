@@ -30,6 +30,8 @@ class Navigation extends Component {
 
     const { open, muiTheme } = this.props;
 
+    const tabIndex = open ? 0 : -1;
+
     return (
       <div>
         <Drawer
@@ -45,7 +47,7 @@ class Navigation extends Component {
                 backgroundColor: muiTheme.palette.primary1Color,
                 height: muiTheme.appBar.height
               }}
-              tabIndex={open ? 0 : -1}
+              tabIndex={tabIndex}
             >
               <NavigationClose
                 style={{
@@ -59,7 +61,7 @@ class Navigation extends Component {
                 key={route}
                 containerElement={<Link to={route} />}
                 primaryText={text}
-                tabIndex={open ? 0 : -1}
+                tabIndex={tabIndex}
                 onClick={() => this.onCLick()}
               />
             )}
@@ -69,13 +71,13 @@ class Navigation extends Component {
             <Settings />
             <ListItem
               primaryText="Reset Score"
-              tabIndex={open ? 0 : -1}
+              tabIndex={tabIndex}
               onClick={() => this.props.resetScore()}
             />
             <ListItem
               containerElement={<Link to="/about" />}
               primaryText="About"
-              tabIndex={open ? 0 : -1}
+              tabIndex={tabIndex}
               onClick={() => this.onCLick()}
             />
           </List>

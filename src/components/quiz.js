@@ -31,9 +31,9 @@ class Quiz extends Component {
         }}
       >
         <span style={{ width: "24px" }} />
-        {type === "flag" ? <Flag flag={option.flag} /> : ""}
-        {type === "country" ? option.name : ""}
-        {type === "capital" ? option.capital : ""}
+        {type === "flag" && <Flag flag={option.flag} />}
+        {type === "country" && option.name}
+        {type === "capital" && option.capital}
         <AnswerStatus {...this.props} option={option} />
       </ListItem>
     );
@@ -50,21 +50,18 @@ class Quiz extends Component {
 
     return (
       <div>
-        {from === "flag"
-          ? <Container>
-              <Flag flag={answer.flag} large />
-            </Container>
-          : ""}
-        {from === "country"
-          ? <Heading>
-              {answer.name}
-            </Heading>
-          : ""}
-        {from === "capital"
-          ? <Heading>
-              {answer.capital}
-            </Heading>
-          : ""}
+        {from === "flag" &&
+          <Container>
+            <Flag flag={answer.flag} large />
+          </Container>}
+        {from === "country" &&
+          <Heading>
+            {answer.name}
+          </Heading>}
+        {from === "capital" &&
+          <Heading>
+            {answer.capital}
+          </Heading>}
         <List style={{ maxWidth: "100%", width: "35em", margin: "0 auto" }}>
           {this.renderOptions(to)}
         </List>
