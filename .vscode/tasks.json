@@ -13,11 +13,6 @@
       "isBackground": true
 		},
 		{
-			"taskName": "test",
-			"args": ["run", "test"],
-			"isTestCommand": true
-		},
-		{
 			"taskName": "build",
 			"args": ["run", "build"],
 			"isBuildCommand": true
