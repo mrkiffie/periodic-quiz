@@ -82,7 +82,7 @@ module.exports = {
     // https://github.com/facebookincubator/create-react-app/issues/290
     // `web` extension prefixes have been added for better support
     // for React Native Web.
-    extensions: [".web.js", ".js", ".json", ".web.jsx", ".jsx"],
+    extensions: [".tsx", ".ts", ".web.js", ".js", ".json", ".web.jsx", ".jsx"],
     alias: {
       // Support React Native Web
       // https://www.smashingmagazine.com/2016/08/a-glimpse-into-the-future-with-react-native-for-web/
@@ -130,6 +130,7 @@ module.exports = {
       {
         exclude: [
           /\.html$/,
+          /\.(ts|tsx)$/,
           /\.(js|jsx)$/,
           /\.css$/,
           /\.json$/,
@@ -153,14 +154,17 @@ module.exports = {
           name: "static/media/[name].[hash:8].[ext]"
         }
       },
-      // Process JS with Babel.
       {
-        test: /\.(js|jsx)$/,
+        test: /\.(j|t)sx?$/,
         include: paths.appSrc,
-        loader: require.resolve("babel-loader"),
-        options: {
-          compact: true
-        }
+        use: [
+          {
+            loader: require.resolve("ts-loader"),
+            options: {
+              transpileOnly: true
+            }
+          }
+        ]
       },
       // The notation here is somewhat confusing.
       // "postcss" loader applies autoprefixer to our CSS.
