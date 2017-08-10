@@ -1,13 +1,15 @@
-import React from "react";
-
-export default props =>
+import * as React from "react";
+interface IProps extends React.Props<{}> {
+  style?: any;
+}
+export const Container: React.SFC<IProps> = ({ children, style = {} }) =>
   <div
     style={{
       margin: "1em",
       display: "flex",
       justifyContent: "center",
-      ...props.style
+      ...style
     }}
   >
-    {props.children}
+    {children}
   </div>;

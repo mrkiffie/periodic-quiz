@@ -1,27 +1,35 @@
-import React, { Component } from "react";
+import * as React from "react";
 import { connect } from "react-redux";
-import { AppBar } from "material-ui";
-import Navigation from "./navigation";
+import AppBar from "material-ui/AppBar";
+import { Navigation } from "./navigation";
 import { toggleMenu } from "../actions";
 import Score from "./score";
 
-class AppHeader extends Component {
-  render() {
-    const { quiz, settings, menu } = this.props;
-    return (
-      <div>
-        <AppBar
-          title="Flag Quiz"
-          onLeftIconButtonTouchTap={() => this.props.toggleMenu(true)}
-          iconElementRight={settings.score ? <Score {...quiz} /> : <span />}
-        />
-        <Navigation open={menu.open} toggleMenu={this.props.toggleMenu} />
-      </div>
-    );
-  }
+interface IAppHeaderProps extends React.Props<any> {
+  quiz: any;
+  settings: any;
+  menu: {
+    open: boolean;
+  };
+  toggleMenu: (open?: boolean) => {};
 }
 
-export default connect(
-  state => ({ menu: state.menu, settings: state.settings, quiz: state.quiz }),
+const AppHeaderBase: React.SFC<IAppHeaderProps> = ({
+  quiz,
+  settings,
+  menu,
+  toggleMenu
+}) =>
+  <div>
+    <AppBar
+      title="Flag Quiz"
+      onLeftIconButtonTouchTap={() => toggleMenu(true)}
+      iconElementRight={settings.score ? <Score {...quiz} /> : <span />}
+    />
+    <Navigation open={menu.open} toggleMenu={toggleMenu} />
+  </div>;
+
+export const AppHeader = connect(
+  ({ menu, settings, quiz }) => ({ menu, settings, quiz }),
   { toggleMenu }
-)(AppHeader);
+)(AppHeaderBase);

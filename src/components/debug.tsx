@@ -1,22 +1,16 @@
-import React, { Component } from "react";
+import * as React from "react";
 import { connect } from "react-redux";
 
-class Debug extends Component {
-  render() {
-    const { debug } = this.props.state.settings;
-
-    if (!debug) {
-      return <div />;
-    }
-
-    return (
-      <div>
-        <pre>
-          {JSON.stringify(this.props.state, null, 4)}
-        </pre>
-      </div>
-    );
-  }
+interface IDebugProps extends React.Props<{}> {
+  state: any;
 }
 
-export default connect(state => ({ state }))(Debug);
+const DebugBase: React.SFC<IDebugProps> = ({ state }) =>
+  <div>
+    {state.settings.debug &&
+      <pre>
+        {JSON.stringify(state, null, 4)}
+      </pre>}
+  </div>;
+
+export const Debug = connect(state => ({ state }))(DebugBase);
