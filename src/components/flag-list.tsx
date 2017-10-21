@@ -28,8 +28,7 @@ interface IVirtulizedList {
   rowRenderer: (props: IRowRenderer) => JSX.Element;
 }
 
-class FlagListIndexBase extends React.Component<IFlagListIndex>
-  implements IVirtulizedList {
+class FlagListIndexBase extends React.Component<IFlagListIndex> implements IVirtulizedList {
   rowRenderer = ({ key, index, style }) => {
     const { filteredCountries = [] } = this.props.search;
     const country = filteredCountries[index];
@@ -39,11 +38,7 @@ class FlagListIndexBase extends React.Component<IFlagListIndex>
     }
 
     return (
-      <ListItem
-        containerElement={<Link to={`/countries/${country.iso}`} />}
-        key={key}
-        style={style}
-      >
+      <ListItem containerElement={<Link to={`/countries/${country.iso}`} />} key={key} style={style}>
         <div style={{ textAlign: "center", marginBottom: ".5em" }}>
           {country.name}, {country.capital}
         </div>
@@ -59,9 +54,7 @@ class FlagListIndexBase extends React.Component<IFlagListIndex>
   render() {
     const { term, filteredCountries } = this.props.search;
     return (
-      <div
-        style={{ position: "absolute", top: 64, left: 0, right: 0, bottom: 0 }}
-      >
+      <div style={{ position: "absolute", top: 64, left: 0, right: 0, bottom: 0 }}>
         <Search value={term} onChange={this.onChange} />
         <div
           style={{
@@ -73,14 +66,15 @@ class FlagListIndexBase extends React.Component<IFlagListIndex>
           }}
         >
           <AutoSizer>
-            {({ height, width }) =>
+            {({ height, width }) => (
               <List
                 width={width}
                 height={height}
                 rowCount={filteredCountries.length}
                 rowHeight={120}
                 rowRenderer={this.rowRenderer}
-              />}
+              />
+            )}
           </AutoSizer>
         </div>
       </div>

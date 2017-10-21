@@ -5,7 +5,7 @@ interface ISearchProps extends React.Props<{}> {
   value: string;
   onChange: (e: any, term: any) => void;
 }
-export const Search: React.SFC<ISearchProps> = ({ value, onChange }) =>
+export const Search: React.SFC<ISearchProps> = ({ value, onChange }) => (
   <TextField
     value={value}
     onChange={onChange}
@@ -17,4 +17,5 @@ export const Search: React.SFC<ISearchProps> = ({ value, onChange }) =>
     hintStyle={{ padding: "0 .5em" }}
     underlineStyle={{ position: "absolute", bottom: 0 }}
     underlineFocusStyle={{ position: "absolute", bottom: 0 }}
-  />;
+  />
+);

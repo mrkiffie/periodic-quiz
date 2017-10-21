@@ -30,9 +30,7 @@ export const loadQuiz = () => {
     const quiz = generateQuizOptions();
 
     const flagsPromises = []; //quiz.options.map(fetchFlag);
-    return Promise.all(flagsPromises.concat(wait(2500))).then(flags =>
-      dispatch(setQuiz(quiz))
-    );
+    return Promise.all(flagsPromises.concat(wait(2500))).then(flags => dispatch(setQuiz(quiz)));
   };
 };
 

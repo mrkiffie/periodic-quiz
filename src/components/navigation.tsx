@@ -40,12 +40,7 @@ class NavigationBase extends React.Component<INavigation> {
 
     return (
       <div>
-        <Drawer
-          open={open}
-          docked={false}
-          disableSwipeToOpen={true}
-          onRequestChange={() => this.onCLick(0)}
-        >
+        <Drawer open={open} docked={false} disableSwipeToOpen={true} onRequestChange={() => this.onCLick(0)}>
           <List style={{ paddingTop: 0, textAlign: "left" }}>
             <ListItem
               onClick={() => this.onCLick(0)}
@@ -62,7 +57,7 @@ class NavigationBase extends React.Component<INavigation> {
                 }}
               />
             </ListItem>
-            {this.routes.map(({ route, text }) =>
+            {this.routes.map(({ route, text }) => (
               <ListItem
                 key={route}
                 containerElement={<Link to={route} />}
@@ -70,16 +65,12 @@ class NavigationBase extends React.Component<INavigation> {
                 tabIndex={tabIndex}
                 onClick={() => this.onCLick()}
               />
-            )}
+            ))}
           </List>
           <Divider />
           <List>
             <Settings />
-            <ListItem
-              primaryText="Reset Score"
-              tabIndex={tabIndex}
-              onClick={() => this.props.resetScore()}
-            />
+            <ListItem primaryText="Reset Score" tabIndex={tabIndex} onClick={() => this.props.resetScore()} />
             <ListItem
               containerElement={<Link to="/about" />}
               primaryText="About"
@@ -93,6 +84,4 @@ class NavigationBase extends React.Component<INavigation> {
   }
 }
 
-export const Navigation = muiThemeable()(
-  connect(null, { resetScore })(NavigationBase)
-);
+export const Navigation = muiThemeable()(connect(null, { resetScore })(NavigationBase));

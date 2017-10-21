@@ -2,7 +2,7 @@ import * as React from "react";
 interface IProps extends React.Props<{}> {
   style?: any;
 }
-export const Container: React.SFC<IProps> = ({ children, style = {} }) =>
+export const Container: React.SFC<IProps> = ({ children, style = {} }) => (
   <div
     style={{
       margin: "1em",
@@ -12,4 +12,5 @@ export const Container: React.SFC<IProps> = ({ children, style = {} }) =>
     }}
   >
     {children}
-  </div>;
+  </div>
+);

@@ -8,7 +8,7 @@ import Route from "react-router/es/Route";
 import Switch from "react-router/es/Switch";
 import Router from "react-router-dom/es/BrowserRouter";
 
-export const Routes = () =>
+export const Routes = () => (
   <Router>
     <App>
       <Switch>
@@ -25,4 +25,5 @@ export const Routes = () =>
         />
       </Switch>
     </App>
-  </Router>;
+  </Router>
+);

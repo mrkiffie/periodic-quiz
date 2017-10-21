@@ -11,7 +11,9 @@
     "build": "react-scripts-ts build",
     "test": "react-scripts-ts test --env=jsdom",
     "eject": "react-scripts-ts eject",
-    "deploy": "npm run build && mv build/index.html build/200.html && surge build"
+    "lint": "prettier src/**/*.ts{,x} --write --print-width 120",
+    "deploy":
+      "npm run build && mv build/index.html build/200.html && surge build"
   },
   "main": "index.js",
   "license": "ISC",
@@ -53,8 +55,6 @@
   },
   "homepage": "./",
   "babel": {
-    "presets": [
-      "react-app"
-    ]
+    "presets": ["react-app"]
   }
 }

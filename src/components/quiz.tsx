@@ -26,7 +26,7 @@ class QuizBase extends React.Component<IQuizProps> {
   }
 
   renderOptions(type) {
-    return this.props.options.map(option =>
+    return this.props.options.map(option => (
       <ListItem
         key={option.iso3}
         onClick={() => this.onClick(option)}
@@ -48,7 +48,7 @@ class QuizBase extends React.Component<IQuizProps> {
         {type === "capital" && option.capital}
         <AnswerStatus {...this.props} option={option} />
       </ListItem>
-    );
+    ));
   }
 
   render() {
@@ -62,21 +62,14 @@ class QuizBase extends React.Component<IQuizProps> {
 
     return (
       <div>
-        {from === "flag" &&
+        {from === "flag" && (
           <Container>
             <Flag flag={answer.flag} large />
-          </Container>}
-        {from === "country" &&
-          <Heading>
-            {answer.name}
-          </Heading>}
-        {from === "capital" &&
-          <Heading>
-            {answer.capital}
-          </Heading>}
-        <List style={{ maxWidth: "100%", width: "35em", margin: "0 auto" }}>
-          {this.renderOptions(to)}
-        </List>
+          </Container>
+        )}
+        {from === "country" && <Heading>{answer.name}</Heading>}
+        {from === "capital" && <Heading>{answer.capital}</Heading>}
+        <List style={{ maxWidth: "100%", width: "35em", margin: "0 auto" }}>{this.renderOptions(to)}</List>
       </div>
     );
   }

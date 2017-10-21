@@ -14,12 +14,7 @@ interface IAppHeaderProps extends React.Props<any> {
   toggleMenu: (open?: boolean) => {};
 }
 
-const AppHeaderBase: React.SFC<IAppHeaderProps> = ({
-  quiz,
-  settings,
-  menu,
-  toggleMenu
-}) =>
+const AppHeaderBase: React.SFC<IAppHeaderProps> = ({ quiz, settings, menu, toggleMenu }) => (
   <div>
     <AppBar
       title="Flag Quiz"
@@ -27,9 +22,9 @@ const AppHeaderBase: React.SFC<IAppHeaderProps> = ({
       iconElementRight={settings.score ? <Score {...quiz} /> : <span />}
     />
     <Navigation open={menu.open} toggleMenu={toggleMenu} />
-  </div>;
+  </div>
+);
 
-export const AppHeader = connect(
-  ({ menu, settings, quiz }) => ({ menu, settings, quiz }),
-  { toggleMenu }
-)(AppHeaderBase);
+export const AppHeader = connect(({ menu, settings, quiz }) => ({ menu, settings, quiz }), {
+  toggleMenu
+})(AppHeaderBase);

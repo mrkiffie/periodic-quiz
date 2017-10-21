@@ -10,11 +10,7 @@ interface ISettingsProps {
   toggleScore: () => {};
 }
 
-const SettingsBase: React.SFC<ISettingsProps> = ({
-  score,
-  open,
-  toggleScore
-}) =>
+const SettingsBase: React.SFC<ISettingsProps> = ({ score, open, toggleScore }) => (
   <div>
     <ListItem
       primaryText="Settings"
@@ -28,9 +24,9 @@ const SettingsBase: React.SFC<ISettingsProps> = ({
         />
       ]}
     />
-  </div>;
+  </div>
+);
 
-export const Settings = connect(
-  state => ({ score: state.settings.score, open: state.menu.open }),
-  { toggleScore }
-)(SettingsBase);
+export const Settings = connect(state => ({ score: state.settings.score, open: state.menu.open }), {
+  toggleScore
+})(SettingsBase);

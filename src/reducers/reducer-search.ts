@@ -8,9 +8,7 @@ const initialState = {
 
 export const filterCountriesByTerm = (term, countries) => {
   const regex = new RegExp(term, "i");
-  return countries.filter(
-    country => regex.test(country.name) || regex.test(country.capital)
-  );
+  return countries.filter(country => regex.test(country.name) || regex.test(country.capital));
 };
 
 export default (state = initialState, action) => {

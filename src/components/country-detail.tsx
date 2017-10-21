@@ -37,12 +37,8 @@ class CountryDetailBase extends React.Component<ICountryDetailProps> {
         <Container>
           <Flag flag={country.flag} large />
         </Container>
-        <Heading>
-          {country.name}
-        </Heading>
-        <SubHeading>
-          {country.capital}
-        </SubHeading>
+        <Heading>{country.name}</Heading>
+        <SubHeading>{country.capital}</SubHeading>
 
         <FlagList countries={country.neighbours} />
       </div>

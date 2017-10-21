@@ -12,10 +12,7 @@ export const generateQuizOptions = (num = QUIZ_OPTIONS_COUNT) => {
     queue = queue.slice(1);
   }
 
-  const options = Random.getRandomRange(
-    countries.filter(country => queue.indexOf(country.iso3) === -1),
-    num
-  );
+  const options = Random.getRandomRange(countries.filter(country => queue.indexOf(country.iso3) === -1), num);
   const answer = Random.getRandomRange(options, 1)[0];
 
   queue.push(answer.iso3);

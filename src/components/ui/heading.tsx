@@ -1,6 +1,6 @@
 import * as React from "react";
 
-export const Heading: React.SFC = ({ children }) =>
+export const Heading: React.SFC = ({ children }) => (
   <h1
     style={{
       lineHeight: "1.5",
@@ -10,4 +10,5 @@ export const Heading: React.SFC = ({ children }) =>
     }}
   >
     {children}
-  </h1>;
+  </h1>
+);
