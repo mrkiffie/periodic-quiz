@@ -5,7 +5,7 @@
   "description": "A simple Flag Quiz",
   "start_url": "./",
   "display": "standalone",
-  "background_color": "#08f",
+  "background_color": "#fff",
   "theme_color": "#08f",
   "orientation": "portrait",
   "icons": [
@@ -15,7 +15,6 @@
       "type": "image/png"
     },
     {
-
       "src": "flag-quiz.svg"
     }
   ]

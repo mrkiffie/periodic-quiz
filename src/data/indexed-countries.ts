@@ -11,6 +11,7 @@ countries.forEach(country => {
   country.neighbours.forEach(iso => {
     const neighbour = indexedCountries[iso];
     if (!neighbour) {
+      // tslint:disable-next-line:no-console
       console.warn("country not found", iso);
     }
   });

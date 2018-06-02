@@ -4,5 +4,15 @@
     "tslint-react",
     "tslint-eslint-rules",
     "tslint-config-prettier"
-  ]
+  ],
+  "rules": {
+    "ordered-imports": false,
+    "object-literal-sort-keys": false,
+    "no-submodule-imports": false,
+    "jsx-boolean-value": false,
+    "jsx-no-lambda": false,
+    "member-ordering": false,
+    "no-shadowed-variable": false,
+    "no-var-requires": false
+  }
 }

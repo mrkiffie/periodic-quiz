@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,7 +18,9 @@
       line-height: 1.5;
 
     }
-    html, body {
+
+    html,
+    body {
       height: 100%;
       position: absolute;
       top: 0;
@@ -25,13 +28,15 @@
       right: 0;
       bottom: 0;
     }
-    .container {
+
+    #flag-quiz {
       height: 100%;
     }
   </style>
 </head>
+
 <body>
-  <div class="container"></div>
+  <div id="flag-quiz"></div>
   <script>
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('service-worker.js').catch(function (ex) {
@@ -41,4 +46,5 @@
     }
   </script>
 </body>
+
 </html>

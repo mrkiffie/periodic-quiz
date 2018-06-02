@@ -12,42 +12,38 @@
     "test": "react-scripts-ts test --env=jsdom",
     "eject": "react-scripts-ts eject",
     "lint": "prettier src/**/*.ts{,x} --write --print-width 120",
-    "deploy":
-      "npm run build && mv build/index.html build/200.html && surge build"
+    "deploy": "npm run build && mv build/index.html build/200.html && surge build"
   },
   "main": "index.js",
   "license": "ISC",
   "dependencies": {
-    "localforage": "^1.5.2",
-    "material-ui": "^0.19.4",
+    "@reach/router": "^1.1.0",
+    "idb-keyval": "3.0.4",
+    "match-sorter": "^2.2.1",
+    "mobx": "^4.1.1",
+    "mobx-react": "^5.0.0",
     "object-assign": "4.1.1",
     "promise": "8.0.1",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0",
-    "react-redux": "5.0.6",
-    "react-router": "^4.2.0",
-    "react-router-dom": "^4.2.2",
-    "react-scripts-ts": "2.8.0",
-    "react-tap-event-plugin": "^3.0.2",
-    "react-virtualized": "^9.12.0",
-    "redux": "3.7.2",
-    "redux-persist": "^4.10.1",
-    "redux-thunk": "2.2.0",
-    "whatwg-fetch": "2.0.3"
+    "react": "^16.3.1",
+    "react-dom": "^16.3.1",
+    "react-scripts-ts": "2.16.0",
+    "react-virtualized": "^9.18.5",
+    "styled-components": "^3.3.0",
+    "whatwg-fetch": "2.0.4"
   },
   "devDependencies": {
-    "@types/jest": "^21.1.4",
-    "@types/material-ui": "^0.18.3",
-    "@types/node": "^8.0.46",
-    "@types/react": "^16.0.16",
-    "@types/react-dom": "^16.0.2",
-    "@types/react-router": "^4.0.16",
-    "@types/react-router-dom": "^4.0.8",
+    "@types/jest": "^23.0.0",
+    "@types/node": "^10.3.0",
+    "@types/reach__router": "^1.0.0",
+    "@types/react": "^16.3.5",
+    "@types/react-dom": "^16.0.4",
     "@types/react-tap-event-plugin": "0.0.30",
-    "@types/react-virtualized": "^9.7.6",
-    "tslint-config-prettier": "^1.6.0",
-    "tslint-eslint-rules": "^4.1.1",
-    "tslint-react": "^3.2.0"
+    "@types/react-virtualized": "^9.7.14",
+    "tslint": "^5.10.0",
+    "tslint-config-prettier": "^1.10.0",
+    "tslint-eslint-rules": "^5.1.0",
+    "tslint-react": "^3.5.1",
+    "typescript": "~2.8.4"
   },
   "description": "A simple flag quiz",
   "author": {
@@ -55,6 +51,8 @@
   },
   "homepage": "./",
   "babel": {
-    "presets": ["react-app"]
+    "presets": [
+      "react-app"
+    ]
   }
 }
