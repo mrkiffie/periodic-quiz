@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#08f">
   <link rel="manifest" href="manifest.json">
-  <title>Flag Quiz</title>
+  <title>Periodic Elements Quiz</title>
   <style>
     body {
       background: #eee;
@@ -29,14 +29,15 @@
       bottom: 0;
     }
 
-    #flag-quiz {
+    #periodic-quiz {
       height: 100%;
     }
+
   </style>
 </head>
 
 <body>
-  <div id="flag-quiz"></div>
+  <div id="periodic-quiz"></div>
   <script>
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('service-worker.js').catch(function (ex) {
@@ -44,6 +45,7 @@
         console.warn('(This warning can be safely ignored outside of the production build.)');
       });
     }
+
   </script>
 </body>
 

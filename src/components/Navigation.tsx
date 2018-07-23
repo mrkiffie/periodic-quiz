@@ -1,11 +1,9 @@
 import * as React from "react";
 import { observer, inject } from "mobx-react";
-import { FlagQuizStore } from "../store/FlagQuizStore";
+import { MainStore } from "../store/MainStore";
 import CloseIcon from "./icon/Close";
 import { Button, IconButton } from "./ui/atoms/Button";
 import { Toolbar } from "./ui/Toolbar";
-import { List } from "./ui/List";
-import { ListItem } from "./ui/atoms/ListItem";
 import { Nav } from "./ui/Nav";
 import { Overlay } from "./ui/Overlay";
 import { Link } from "./ui/atoms/Link";
@@ -19,12 +17,12 @@ interface INavigation {
   toggleScore?: () => {};
   resetScore?: () => {};
 }
-@inject((allStores: { flagQuizStore: FlagQuizStore }) => ({
-  isMenuOpen: allStores.flagQuizStore.menu.open,
-  isScoreEnabled: allStores.flagQuizStore.settings.isScoreEnabled,
-  toggleMenu: allStores.flagQuizStore.menu.toggleMenu,
-  toggleScore: allStores.flagQuizStore.settings.toggleScore,
-  resetScore: allStores.flagQuizStore.quiz.resetScore
+@inject((allStores: { mainStore: MainStore }) => ({
+  isMenuOpen: allStores.mainStore.menu.open,
+  isScoreEnabled: allStores.mainStore.settings.isScoreEnabled,
+  toggleMenu: allStores.mainStore.menu.toggleMenu,
+  toggleScore: allStores.mainStore.settings.toggleScore,
+  resetScore: allStores.mainStore.quiz.resetScore
 }))
 @observer
 export class Navigation extends React.Component<INavigation> {
@@ -39,13 +37,8 @@ export class Navigation extends React.Component<INavigation> {
   private delayedClick = () => this.onClick(200);
 
   private routes = [
-    { route: "/flag-country", text: "Flag Country" },
-    { route: "/flag-capital", text: "Flag Capital" },
-    { route: "/country-flag", text: "Country Flag" },
-    { route: "/country-capital", text: "Country Capital" },
-    { route: "/capital-flag", text: "Capital Flag" },
-    { route: "/capital-country", text: "Capital Country" },
-    { route: "/flag-list", text: "Flag List" }
+    { route: "/element-quiz", text: "Element Quiz" },
+    { route: "/search", text: "Search Elements" }
   ];
 
   public render() {

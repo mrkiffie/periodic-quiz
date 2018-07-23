@@ -1,21 +1,20 @@
 {
   "lang": "en",
-  "short_name": "Flag Quiz",
-  "name": "Flag Quiz",
-  "description": "A simple Flag Quiz",
+  "short_name": "Periodic Quiz",
+  "name": "Periodic Elements Quiz",
+  "description": "A simple Periodic Elements Quiz",
   "start_url": "./",
   "display": "standalone",
   "background_color": "#fff",
   "theme_color": "#08f",
   "orientation": "portrait",
-  "icons": [
-    {
-      "src": "flag-quiz-512x512.png",
+  "icons": [{
+      "src": "periodic-quiz-512x512.png",
       "sizes": "512x512",
       "type": "image/png"
     },
     {
-      "src": "flag-quiz.svg"
+      "src": "periodic-quiz.svg"
     }
   ]
 }

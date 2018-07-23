@@ -1,21 +1,19 @@
 import { Random } from "../util/Random";
-import countries, { ICountry } from "../data/countries";
+import { elements } from "./items";
 
-export const QUIZ_OPTIONS_COUNT = 5;
+export const QUIZ_OPTIONS_COUNT = 6;
 
-type Iso = string;
-
-let queue: Iso[] = [];
+let queue: string[] = [];
 
 export const generateQuizOptions = (num = QUIZ_OPTIONS_COUNT) => {
-  if (queue.length > countries.length * 0.2) {
+  if (queue.length > elements.length * 0.2) {
     queue = queue.slice(1);
   }
 
   const options = Random.getRandomRange(
-    countries.filter(country => !queue.includes(country.iso)),
+    elements.filter(element => !queue.includes(element.symbol)),
     num
-  ).map(country => country.iso);
+  ).map(element => element.symbol);
   const answer = Random.getRandomRange(options, 1)[0];
 
   queue.push(answer);

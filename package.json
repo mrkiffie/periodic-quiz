@@ -1,8 +1,8 @@
 {
-  "name": "flag-quiz",
+  "name": "periodic-quiz",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mrkiffie/flag-quiz.git"
+    "url": "https://github.com/mrkiffie/periodic-quiz.git"
   },
   "version": "1.0.0",
   "private": true,
@@ -45,7 +45,7 @@
     "tslint-react": "^3.5.1",
     "typescript": "~2.8.4"
   },
-  "description": "A simple flag quiz",
+  "description": "A simple periodic quiz",
   "author": {
     "name": "Kiffie Liversage"
   },

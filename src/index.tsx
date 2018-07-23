@@ -3,14 +3,16 @@ import * as ReactDOM from "react-dom";
 import { observer, Provider } from "mobx-react";
 
 import { Routes } from "./routes";
-import { FlagQuizStore } from "./store/FlagQuizStore";
+import { MainStore } from "./store/MainStore";
 
-const flagQuizStore = new FlagQuizStore();
+const mainStore = new MainStore();
+
+console.log(mainStore);
 
 const App = observer(() => (
-  <Provider flagQuizStore={flagQuizStore}>
+  <Provider mainStore={mainStore}>
     <Routes />
   </Provider>
 ));
 
-ReactDOM.render(<App />, document.getElementById("flag-quiz"));
+ReactDOM.render(<App />, document.getElementById("periodic-quiz"));

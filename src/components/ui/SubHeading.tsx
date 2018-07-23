@@ -1,15 +1,9 @@
-import * as React from "react";
+import styled from "styled-components";
 
-export const SubHeading: React.SFC = ({ children }) => (
-  <h2
-    style={{
-      lineHeight: "1.5",
-      margin: "0 0 .5em",
-      textAlign: "center",
-      fontWeight: 300
-    }}
-  >
-    {children}
-  </h2>
-);
+export const SubHeading = styled.div`
+  line-height: 1.5;
+  margin: 0 0 0.5em;
+  text-align: center;
+  font-weight: 300;
+`;
 SubHeading.displayName = "SubHeading";

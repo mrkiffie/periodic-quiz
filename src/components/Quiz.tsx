@@ -1,30 +1,56 @@
 import * as React from "react";
 import { observer, inject } from "mobx-react";
-import { Flag } from "./ui/Flag";
-import { Container } from "./ui/Container";
-import { AnswerStatus, Spacer } from "./ui/AnswerStatus";
-import { Heading } from "./ui/Heading";
-import { FlagQuizStore } from "../store/FlagQuizStore";
-import { ICountry } from "../data/countries";
-import { Button } from "./ui/atoms/Button";
 
-interface IQuizProps {
-  selected?: ICountry;
-  answerQuiz?: (answer: ICountry) => void;
-  options?: ICountry[];
-  answer?: ICountry;
-  fromTo?: string;
+import { Heading } from "./ui/Heading";
+import { SimpleElement } from "./ui/Element";
+import { MainStore } from "../store/MainStore";
+import { Button } from "./ui/atoms/Button";
+import { IElement } from "../data/items";
+
+import styled, { css } from "styled-components";
+
+const Grid = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1.5em;
+  padding: 0 1.5em;
+`;
+
+interface IAnswerButton {
+  correct?: boolean;
+  incorrect?: boolean;
+}
+const AnswerButton = Button.extend`
+  padding: 0;
+  ${(p: IAnswerButton) =>
+    p.correct &&
+    css`
+      background-color: #4caf50 !important;
+    `} ${(p: IAnswerButton) =>
+    p.incorrect &&
+    css`
+      background-color: #f44336 !important;
+    `};
+`;
+
+interface IQuizProps<T> {
+  selected?: T;
+  answerQuiz?: (answer: T) => void;
+  options?: T[];
+  answer?: T;
   path?: string;
 }
 
-@inject((allStores: { flagQuizStore: FlagQuizStore }) => ({
-  selected: allStores.flagQuizStore.quiz.selected,
-  answerQuiz: allStores.flagQuizStore.quiz.answerQuiz,
-  options: allStores.flagQuizStore.quiz.options,
-  answer: allStores.flagQuizStore.quiz.answer
+@inject((allStores: { mainStore: MainStore }) => ({
+  selected: allStores.mainStore.quiz.selected,
+  answerQuiz: allStores.mainStore.quiz.answerQuiz,
+  options: allStores.mainStore.quiz.options,
+  answer: allStores.mainStore.quiz.answer
 }))
 @observer
-export class Quiz extends React.Component<IQuizProps> {
+export class Quiz<T extends IElement = IElement> extends React.Component<
+  IQuizProps<T>
+> {
   public onClick(option) {
     if (this.props.selected) {
       return; // option already selected - prevent duplicate clicks
@@ -32,25 +58,8 @@ export class Quiz extends React.Component<IQuizProps> {
     this.props.answerQuiz(option);
   }
 
-  public renderOptions(type) {
-    return this.props.options.map(option => (
-      <Button key={option.iso3} onClick={() => this.onClick(option)}>
-        <Spacer />
-        {type === "flag" && (
-          <div>
-            <Flag flag={option.flag} />
-          </div>
-        )}
-        {type === "country" && option.name}
-        {type === "capital" && option.capital}
-        <AnswerStatus {...this.props} option={option} />
-      </Button>
-    ));
-  }
-
   public render() {
-    const { answer, fromTo = "flag-country" } = this.props;
-    const [from, to] = fromTo.split("-");
+    const { answer, selected, options } = this.props;
 
     if (!answer) {
       return <div />;
@@ -58,16 +67,25 @@ export class Quiz extends React.Component<IQuizProps> {
 
     return (
       <div>
-        {from === "flag" && (
-          <Container>
-            <Flag flag={answer.flag} large />
-          </Container>
-        )}
-        {from === "country" && <Heading>{answer.name}</Heading>}
-        {from === "capital" && <Heading>{answer.capital}</Heading>}
-        <div style={{ maxWidth: "100%", width: "35em", margin: "0 auto" }}>
-          {this.renderOptions(to)}
-        </div>
+        <Heading>{answer.name}</Heading>
+        <Grid>
+          {options.map(option => (
+            <AnswerButton
+              key={option.symbol}
+              onClick={() => this.onClick(option)}
+              correct={!!(selected && option.symbol === answer.symbol)}
+              incorrect={
+                !!(
+                  selected &&
+                  selected.symbol === option.symbol &&
+                  selected.symbol !== answer.symbol
+                )
+              }
+            >
+              <SimpleElement element={option} />
+            </AnswerButton>
+          ))}
+        </Grid>
       </div>
     );
   }

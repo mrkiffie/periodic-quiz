@@ -10,7 +10,7 @@ import { formatScore } from "../util/formatScore";
 
 import { Navigation } from "./Navigation";
 import { Score } from "./Score";
-import { FlagQuizStore } from "../store/FlagQuizStore";
+import { MainStore } from "../store/MainStore";
 
 interface IAppHeaderProps extends React.Props<any> {
   count?: number;
@@ -20,11 +20,11 @@ interface IAppHeaderProps extends React.Props<any> {
 }
 
 export const AppHeader: React.SFC<IAppHeaderProps> = inject(
-  (allStores: { flagQuizStore: FlagQuizStore }) => ({
-    count: allStores.flagQuizStore.quiz.count,
-    score: allStores.flagQuizStore.quiz.score,
-    isScoreEnabled: allStores.flagQuizStore.settings.isScoreEnabled,
-    toggleMenu: allStores.flagQuizStore.menu.toggleMenu
+  (allStores: { mainStore: MainStore }) => ({
+    count: allStores.mainStore.quiz.count,
+    score: allStores.mainStore.quiz.score,
+    isScoreEnabled: allStores.mainStore.settings.isScoreEnabled,
+    toggleMenu: allStores.mainStore.menu.toggleMenu
   })
 )(
   observer(props => (
@@ -33,7 +33,7 @@ export const AppHeader: React.SFC<IAppHeaderProps> = inject(
         <IconButton aria-label="Menu" onClick={props.toggleMenu}>
           <MenuIcon />
         </IconButton>
-        <ToolbarHeading>Flag Quiz</ToolbarHeading>
+        <ToolbarHeading>Periodic Elements Quiz</ToolbarHeading>
         {props.isScoreEnabled && (
           <Score>
             {props.score} / {props.count} -{" "}
