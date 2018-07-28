@@ -1,7 +1,6 @@
 import * as React from "react";
 import { observer, inject } from "mobx-react";
 import { Element } from "./ui/Element";
-import { Container } from "./ui/Container";
 import { Heading } from "./ui/Heading";
 import { SubHeading } from "./ui/SubHeading";
 import { Typography } from "./ui/atoms/Typography";
@@ -39,12 +38,9 @@ export class ElementDetail extends React.Component<IElementDetailProps> {
 
     return (
       <>
-        <Container>
-          <Element element={element} />
-        </Container>
-        <Heading>{element.symbol}</Heading>
-        <SubHeading>{element.name}</SubHeading>
         <Typography>
+          <Element element={element} />
+          <Heading>{element.name}</Heading>
           <p>{element.summary}</p>
         </Typography>
       </>

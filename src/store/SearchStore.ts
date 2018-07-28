@@ -1,6 +1,6 @@
 import { observable, computed } from "mobx";
 import { elements } from "../data/items";
-import { default as matchSorter } from "match-sorter";
+import matchSorter from "match-sorter";
 
 export class SearchStore {
   @observable public elements = elements;
@@ -12,7 +12,7 @@ export class SearchStore {
   @computed
   get items() {
     return matchSorter(this.elements, this.term, {
-      keys: ["symbol", "name"]
+      keys: ["symbol", "name", "number", "atomic_mass"]
     });
   }
 }

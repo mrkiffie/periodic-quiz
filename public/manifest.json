@@ -6,7 +6,7 @@
   "start_url": "./",
   "display": "standalone",
   "background_color": "#fff",
-  "theme_color": "#08f",
+  "theme_color": "#80f",
   "orientation": "portrait",
   "icons": [{
       "src": "periodic-quiz-512x512.png",

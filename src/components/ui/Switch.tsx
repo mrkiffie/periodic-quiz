@@ -36,7 +36,7 @@ const Track = styled.div`
 
   ::before {
     content: "";
-    background: #08f;
+    background: #80f;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -68,7 +68,7 @@ const Thumb = styled.div`
   display: inline-block;
   width: 3em;
   height: 3em;
-  background: ${(p: IThumbProps) => (p.checked ? "#08f" : "#f5f5f5")};
+  background: ${(p: IThumbProps) => (p.checked ? "#80f" : "#f5f5f5")};
   border-radius: 50%;
   box-shadow: 0px 0.125em 0.75em rgba(0, 0, 0, 0.12),
     0px 0.125em 0.5em rgba(0, 0, 0, 0.12);

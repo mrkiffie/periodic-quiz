@@ -12,6 +12,11 @@ import { MainStore } from "../store/MainStore";
 const Link = styled(RawLink)`
   text-decoration: none;
   color: inherit;
+  overflow: hidden;
+  &:focus,
+  &:hover {
+    background: rgba(0, 0, 0, 0.1);
+  }
 `;
 
 const ScrollArea = styled.div`
@@ -29,9 +34,9 @@ const ElementList = styled.div`
   bottom: 0;
 `;
 const ListItem = styled.div`
-  height: 120px;
-  margin: 0 auto;
-  width: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
 `;
 
 interface IList<T> {
@@ -70,14 +75,7 @@ export class ElementSearchList extends React.Component<IList<IElement>>
     return (
       <ListItem key={key} style={style}>
         <Link to={`/elements/${element.symbol}`}>
-          <Element
-            element={element}
-            style={{
-              height: 120,
-              width: 120,
-              margin: "30px auto"
-            }}
-          />
+          <Element element={element} />
         </Link>
       </ListItem>
     );

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <style>
+    text{font-family:sans-serif}
+  </style>
+  <path fill-opacity="0" stroke="#fff" stroke-width="30" d="M0 0h512v512H0z"/>
+  <text x="30" y="80" fill="#fff" font-size="60">
+    79
+  </text>
+  <text x="480" y="70" fill="#fff" font-size="40" text-anchor="end">
+    196.9665695
+  </text>
+  <text x="256" y="350" fill="#fff" font-size="310" text-anchor="middle">
+    Au
+  </text>
+  <text x="256" y="449" fill="#fff" font-size="60" text-anchor="middle">
+    Gold
+  </text>
+</svg>

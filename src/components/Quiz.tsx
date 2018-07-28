@@ -10,10 +10,11 @@ import { IElement } from "../data/items";
 import styled, { css } from "styled-components";
 
 const Grid = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 1.5em;
-  padding: 0 1.5em;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 20em;
 `;
 
 interface IAnswerButton {
@@ -21,6 +22,10 @@ interface IAnswerButton {
   incorrect?: boolean;
 }
 const AnswerButton = Button.extend`
+  ${Grid} & {
+    width: unset;
+  }
+  margin: 1em;
   padding: 0;
   ${(p: IAnswerButton) =>
     p.correct &&

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const SubHeading = styled.div`
+export const SubHeading = styled.h2`
   line-height: 1.5;
   margin: 0 0 0.5em;
   text-align: center;
