@@ -32,7 +32,6 @@ export class ElementDetail extends React.Component<IElementDetailProps> {
   public render() {
     const element = this.props.element;
     if (!element) {
-      console.log(element);
       return <div />;
     }
 

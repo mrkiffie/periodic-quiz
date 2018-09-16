@@ -7,8 +7,6 @@ import { MainStore } from "./store/MainStore";
 
 const mainStore = new MainStore();
 
-console.log(mainStore);
-
 const App = observer(() => (
   <Provider mainStore={mainStore}>
     <Routes />
