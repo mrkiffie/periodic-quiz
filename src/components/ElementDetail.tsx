@@ -2,7 +2,6 @@ import * as React from "react";
 import { observer, inject } from "mobx-react";
 import { Element } from "./ui/Element";
 import { Heading } from "./ui/Heading";
-import { SubHeading } from "./ui/SubHeading";
 import { Typography } from "./ui/atoms/Typography";
 
 import { IElement } from "../data/items";

@@ -1,4 +1,3 @@
-import { reaction } from "mobx";
 import { MenuStore } from "./MenuStore";
 import { QuizStore } from "./QuizStore";
 import { ElementListStore } from "./ElementListStore";
