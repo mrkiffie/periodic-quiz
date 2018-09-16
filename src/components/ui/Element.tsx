@@ -36,7 +36,7 @@ export const Element: React.SFC<IElementProps> = ({ element }) => (
         height="118"
         stroke="currentColor"
         fill="transparent"
-        strokeWidth="2"
+        strokeWidth="3"
       />
       <text
         fontSize="60"
